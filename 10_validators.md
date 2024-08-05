@@ -98,3 +98,6 @@ Hier heb je een tussenkopje gebruikt zonder inhoud, bv. `<h3></h3>`. Dit is niet
 - Corrigeer de eventuele fouten (en waarschuwingen) die door de validator ontdekt worden.
 - Informatieve boodschappen mag je negeren (maar je kunt er wel iets uit leren).<br/><br/>
 - Let op: wanneer de validator geen enkele foutmelding geeft, is dat nog altijd geen garantie dat je HTML-document in orde is. Zo kan het document misschien nog ongeldige entity references bevatten.
+
+___
+Volgend hoofdstuk: [HTML in Stories](11_stories.md)
