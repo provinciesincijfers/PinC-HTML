@@ -98,7 +98,7 @@ Standaard zal je webbrowser de lijstitems van een genummerde lijst op elk niveau
 	<li>Instellingen voor kinderopvang</li>
 	<li>Instellingen voor kleuter-, lager- en buitengewoon onderwijs</li>
 	<li>Ziekenhuizen en verzorgingstehuizen
-		<ol type="I">
+		<ol type="i">
 			<li>Brugge</li>
 			<li>Oostende</li>
 		</ol>
@@ -112,7 +112,7 @@ Dit wordt als volgt weergegeven in de browser:
 	<li>Instellingen voor kinderopvang</li>
 	<li>Instellingen voor kleuter-, lager- en buitengewoon onderwijs</li>
 	<li>Ziekenhuizen en verzorgingstehuizen
-		<ol type="I">
+		<ol type="i">
 			<li>Brugge</li>
 			<li>Oostende</li>
 		</ol>
