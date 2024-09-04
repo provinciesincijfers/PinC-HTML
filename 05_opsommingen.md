@@ -84,7 +84,7 @@ Dit wordt als volgt weergegeven in de browser:
 
 <ol>
 	<li>Ziekenhuizen en verzorgingstehuizen
-		<ol type="1">
+		<ol type="1"><!-- nodig voor correcte weergave op GitHub -->
 			<li>Brugge</li>
 			<li>Oostende</li>
 		</ol>
