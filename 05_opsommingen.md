@@ -84,7 +84,7 @@ Dit wordt als volgt weergegeven in de browser:
 
 <ol>
 	<li>Ziekenhuizen en verzorgingstehuizen
-		<ol>
+		<ol type="1">
 			<li>Brugge</li>
 			<li>Oostende</li>
 		</ol>
