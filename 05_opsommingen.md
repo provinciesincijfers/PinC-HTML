@@ -101,6 +101,7 @@ Standaard zal je webbrowser de lijstitems van een genummerde lijst op elk niveau
 		<ol type="i">
 			<li>Brugge</li>
 			<li>Oostende</li>
+			<li>Gent</li>
 		</ol>
 	</li>
 </ol>
@@ -115,9 +116,14 @@ Dit wordt als volgt weergegeven in de browser:
 		<ol type="i">
 			<li>Brugge</li>
 			<li>Oostende</li>
+			<li>Gent</li>
 		</ol>
 	</li>
 </ol>
+
+In bovenstaand voorbeeld zorgt `<ol type="a">` ervoor dat de lijstitems ‘genummerd’ worden met kleine letters en zorgt `<ol type="i">` ervoor dat de lijstitems genummerd worden met Romeinse cijfers (in kleine letters).
+
+Merk op dat de lijstnummers rechts uitgelijnd worden, d.w.z. de puntjes staan netjes onder elkaar, ongeacht de breedte van het lijstnummer.
 
 Je kunt natuurlijk ook naar believen genummerde en ongenummerde lijsten mengen: binnen een li-element binnen een ul-element kun je voor het volgende lijstniveau een ol-element gebruiken en vice versa.
 
