@@ -22,7 +22,7 @@ De validator geeft telkens het regel- en kolomnummer aan waar de fout werd vastg
 
 > *N.B.: het internet staat vol met HTML-documenten die niet volgens de regels gemaakt zijn en die een hele resem foutmeldingen zullen opleveren wanneer je ze door een validator haalt. Moderne webbrowsers zijn echter bijzonder tolerant en zien heel veel fouten door de vingers, waardoor documenten met fouten tóch goed weergegeven worden. Maar fouten en slordigheden kunnen er wel voor zorgen dat je in bepaalde gevallen niet het bedoelde resultaat krijgt. Zo kunnen CSS-regels vaak niet goed toegepast worden wanneer je HTML-document niet correct gestructureerd is.*
 
-Let op: een validator is een bijzonder handig hulpmiddel voor het vinden van fouten in HTML-documenten, maar een validator ontdekt mogelijks niet alle foutsituaties. Wanneer je bijvoorbeeld een entity reference zou gebruiken terwijl de betreffende entity niet (voor)gedefinieerd is (bv. `&PinC;`), dan wordt dat niet door de W3C-validator gemeld. Een webbrowser zal hier ook geen foutmelding geven, maar de betreffende entity reference letterlijk weergeven (dus: &PinC;).
+Let op: een validator is een bijzonder handig hulpmiddel voor het vinden van fouten in HTML-documenten, maar een validator ontdekt niet noodzakelijk alle foutsituaties. Wanneer je bijvoorbeeld een entity reference zou gebruiken terwijl de betreffende entity niet (voor)gedefinieerd is (bv. de niet-bestaande entity reference `&PinC;`), dan wordt dat niet door de W3C-validator gemeld. Een webbrowser zal hier ook geen foutmelding geven, maar zal de betreffende entity reference letterlijk weergeven (dus: &PinC;).
 
 ## Enkele mogelijke foutboodschappen
 

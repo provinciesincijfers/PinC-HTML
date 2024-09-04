@@ -131,7 +131,7 @@ Je kunt natuurlijk ook naar believen genummerde en ongenummerde lijsten mengen: 
 
 De voorbeelden hierboven laten eenvoudige lijsten zien, waarbij elk lijstitem uit een kort stukje tekst bestaat. Een lijst kan echter ook vrij complex woorden, met name als je een lange lijst wilt maken met meerdere niveaus, waarbij lijstitems uit meerdere alinea’s bestaan of zelfs afbeeldingen of tabellen bevatten.
 
-We zagen al dat een li-element behalve een stukje tekst ook weer een ul- of ol-element kan bevatten. Maar een li-element kan nog veel meer bevatten. Wil een lijstitem maken dat uit meerdere alinea’s bestaat, dan kun je **p**-elementen gebruiken binnen li. Of je kunt een kleine tabel opnemen in een lijst door een **table**-element binnen een li-element te plaatsen. (Hoe je een tabel maakt, leer je in het volgende hoofdstuk.)
+We zagen al dat een li-element behalve een stukje tekst ook weer een ul- of ol-element kan bevatten. Maar een li-element kan nog veel meer bevatten. Wil je een lijstitem maken dat uit meerdere alinea’s bestaat, dan kun je **p**-elementen gebruiken binnen li. Of je kunt een kleine tabel opnemen in een lijst door een **table**-element binnen een li-element te plaatsen. (Hoe je een tabel maakt, leer je in het volgende hoofdstuk.)
 
 In dergelijke lange, complexe lijsten kan het handig zijn om bijvoorbeeld extra witruimte toe te voegen tussen de items of bij de overgang naar een volgend niveau.
 

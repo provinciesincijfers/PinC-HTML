@@ -2,13 +2,13 @@
 
 ## Inleiding
 
-In tegenstelling tot Swing-rapporten, die een combinatie zijn van HTML en SRL (Swing Report Language), heb je voor het werken met Swing Stories eigenlijk geen HTML-kennis meer nodig. Een Story maak je door allerlei soorten tegels te creëren in een grafische gebruikersomgeving. Sommige van die tegels bevatten gegevens uit de databank in de vorm van tabellen, grafieken of kaarten; andere tegels bevatten een stukje tekst.
+In tegenstelling tot Swing-rapporten, die een combinatie zijn van HTML en SRL (Swing Report Language), heb je voor het werken met Swing Stories in principe geen HTML-kennis meer nodig. Een Story maak je door allerlei soorten tegels te creëren in een grafische gebruikersomgeving. Sommige van die tegels bevatten gegevens uit de databank in de vorm van tabellen, grafieken of kaarten; andere tegels bevatten een stukje tekst.
 
-In een teksttegel kun je een stukje tekst plaatsen, waarbij je gebruik kunt maken van verschillende soorten opmaak als vet, cursief, genummerde of ongenummerde opsommingen, hyperlinks, enz. Je kunt de tekst opmaken als een alinea met platte tekst (Paragraph) of als tussenkopje (Heading 1, Heading 2 of Heading 3). Je kunt kleuren gebruiken, een ander lettertype kiezen of zelfs een eenvoudige tabel invoegen.
+In een teksttegel kun je een stukje tekst plaatsen, waarbij je gebruik kunt maken van verschillende soorten opmaak als vet, cursief, genummerde of ongenummerde lijsten, hyperlinks, enz. Je kunt de tekst opmaken als een alinea met platte tekst (Paragraph) of als tussenkopje (Heading 1, Heading 2 of Heading 3). Je kunt kleuren gebruiken, een ander lettertype kiezen of zelfs een eenvoudige tabel invoegen.
 
 Dat alles gebeurt door de tekst in het Content-vak van de tegelinstellingen (Settings) van de teksttegel te plaatsen.
 
-Je kunt de tekst rechtstreeks in dat vak typen, maar je zou natuurlijk ook tekst kunnen plakken die je uit een ander document (bijvoorbeeld een Word-document) hebt gekopieerd.
+Je kunt de tekst rechtstreeks in dat vak typen, maar je kunt natuurlijk ook tekst plakken die je uit een ander document (bijvoorbeeld een Word-document) hebt gekopieerd.
 
 Wanneer je tekst plakt, worden samen met de tekst ook opmaakkenmerken mee gekopieerd. Zo blijven vet en cursief bijvoorbeeld behouden.
 
@@ -22,7 +22,7 @@ In de werkbalk van het Content-vak vind je een knop _Source_. Via die knop kun j
 
 Je kunt hiermee dus als het ware ‘onder de motorkap’ kijken en zien hoe de tekst gecodeerd is. Dit kan je helpen om ongewenste opmaak uit de tekst te halen, of om specifieke, gewenste opmaak toe te voegen.
 
-Je ziet: ook al kun je in principe met Stories werken zonder je ook maar iets van HTML aan te trekken, je HTML-kennis kan hier toch weer van pas komen.
+Je ziet: ook al kun je in principe met Stories werken zonder je ook maar iets van HTML aan te trekken, je HTML-kennis kan hier toch weer van pas komen. In de praktijk is de kans overigens bijzonder groot dat je vroeg of laat aan de onderliggende HTML-code zult moeten sleutelen.
 
 ### Kopiëren en plakken uit Word (of een andere toepassing)
 
@@ -52,9 +52,9 @@ Het zijn Microsoft Office-specifieke of Word-specifieke HTML-tags. Het is wellic
 
 Zonder hier gedetailleerd op in te gaan, kunnen we verklappen dat dit de aanduiding is van een _namespace_. De naam van een X(HT)ML-element of ‑attribuut kan voorafgegaan worden door de naam van een namespace en een dubbele punt. De ‘o’-namespace staat hier voor ‘office’. Elementen en attributen uit die namespace volgen niet noodzakelijk dezelfde regels als elementen en attributen in standaard HTML.
 
-Binnen Microsoft-toepassingen is de namespace ‘o’ gedefinieerd; de Microsoft-software past er zijn eigen regels op toe. Binnen Swing is die namespace niet gedefinieerd. Bij het weergeven van de Story zal de webbrowser dit daarom gewoon negeren: het is alsof de betreffende tags of attributen er niet staan.
+Binnen Microsoft-toepassingen is de namespace ‘o’ gedefinieerd; de Microsoft-software past er zijn eigen regels op toe. Binnen Swing is die namespace niet gedefinieerd. Bij het weergeven van de Story zal de webbrowser dit daarom gewoon negeren: het is met andere alsof de betreffende tags of attributen er niet staan.
 
-De HTML-code uit bovenstaand voorbeeld is met andere woorden volledig gelijkwaardig aan deze code:
+De HTML-code uit bovenstaand voorbeeld is met andere woorden volledig gelijkwaardig aan deze, veel compactere code:
 
 ```
 <h1>Kop 1</h1>
@@ -73,9 +73,9 @@ Nog een voorbeeld:
 </p>
 ```
 
-Hier zie je dat er een `class`-attribuut gebruikt wordt. De class-namen zijn weer Office-specifiek: `MsoQuote` en `MsoNormal` staan respectievelijk voor de ingebouwde Word-stijlen _Citaat_ (in het Engels: _Quote_) en _Standaard_ (in het Engels: _Normal_). Het prefix _Mso_ staat voor _Microsoft Office_.
+Hier zie je dat er een `class`-attribuut gebruikt wordt. De classnamen zijn weer Office-specifiek: `MsoQuote` en `MsoNormal` staan respectievelijk voor de ingebouwde Word-stijlen _Citaat_ (in het Engels: _Quote_) en _Standaard_ (in het Engels: _Normal_). Het prefix _Mso_ staat voor _Microsoft Office_.
 
-Aangezien er binnen Swing geen CSS-classes met die namen gedefinieerd zijn, hebben ze binnen Stories geen effect. Daardoor wordt de bijbehorende opmaak ook niet overgenomen wanneer je een stukje Word-tekst kopieert en in Stories plakt.
+Aangezien er binnen Swing geen CSS-classes met die namen gedefinieerd zijn, hebben ze binnen Stories geen effect. Daardoor wordt de bijbehorende opmaak ook niet overgenomen wanneer je dit stukje Word-tekst kopieert en in Stories plakt.
 
 Bij de tweede alinea in het voorbeeld hierboven merk je nu ook dat er (in tegenstelling tot eerdere voorbeelden) een spatie staat tussen `<o:p>` en `</o:p>`. Er kan ook een vaste spatie staan (`&nbsp;`). Dat is de (oneigenlijke) manier waarop een blanco regel gecreëerd wordt in Microsoft Office-applicaties.
 
@@ -101,7 +101,7 @@ Een ander voorbeeld:
 </p>
 ```
 
-Bij deze voorbeelden werd in Word _directe opmaak_ toegepast. D.w.z. in het Word-document werd geen specifieke Word-stijl gebruikt – je krijgt dan de default-stijl _Standaard_ –, maar werd de tekst bijvoorbeeld vet of cursief geplaatst, of werd de tekengrootte of het lettertype aangepast.
+Bij deze voorbeelden werd in Word _directe opmaak_ toegepast. D.w.z. in het Word-document werd geen specifieke Word-stijl gebruikt – je krijgt dan de default-stijl _Standaard_ (`class="MsoNormal"`) –, maar werd de tekst bijvoorbeeld vet of cursief geplaatst, of werd de tekengrootte of het lettertype aangepast.
 
 In de eerste alinea zie je dat een stukje vette tekst met **strong** gecodeerd is; in de tweede alinea is de tekst onderstreept met **u**, en in de derde alinea is de tekst gecursiveerd met **i**.
 
@@ -109,7 +109,11 @@ Je ziet ook **span**-elementen staan: bij het span-element in de eerste alinea i
 
 De span-elementen hebben in deze voorbeelden ook allemaal een `lang="NL"`-attribuut, waarmee aangegeven wordt dat het om een stukje tekst in het Nederlands gaat.
 
-Uit bovenstaande voorbeelden wordt duidelijk dat de HTML-broncode van een teksttegel in Stories al snel heel onoverzichtelijk kan worden wanneer je tekst uit een Word-document kopieert. Door de vele tags en attributen en de afwezigheid van syntax highlighting zie je nauwelijks nog welke tekst er eigenlijk staat. Als je dan ook nog eens een hoop get-statements aan de tekst toevoegt, wordt het helemaal een soep... Maar dat is een ander verhaal. Get-statements in Stories vallen buiten het bestek van deze HTML-handleiding.
+Uit bovenstaande voorbeelden wordt duidelijk dat de HTML-broncode van een teksttegel in Stories al snel heel onoverzichtelijk kan worden wanneer je tekst uit een Word-document kopieert. Door de vele tags en attributen en de afwezigheid van syntax highlighting zie je nauwelijks nog welke tekst er eigenlijk staat.
+
+Als je dan ook nog eens een hoop get-statements aan de tekst toevoegt, wordt het helemaal een soep... Maar dat is een ander verhaal. Get-statements in Stories vallen buiten het bestek van deze HTML-handleiding.
+
+> Toch kunnen we alvast deze tip meegeven: als een get-statement niet het verwachte resultaat maar een foutmelding oplevert, bekijk dan zeker eens de onderliggende HTML-code. Zorg ervoor dat er binnen het get-statement geen enkele HTML-tag staat!
 
 ### Tekst opschonen
 
@@ -121,12 +125,12 @@ Een andere aanpak is deze: in plaats van de tekst te **plakken** (met **Ctrl+V**
 
 Kies je voor dat laatste, dan wordt enkel de eigenlijke tekst geplakt en wordt de oorspronkelijke opmaak _niet_ mee gekopieerd. De enige HTML-elementen die daarbij overblijven, zijn **p** en **br**. Je bent dan verlost van namespaces, classes, span-elementen, style-attributen, etc.
 
-Je krijgt daardoor geen ongewenste veranderingen van tekengrootte, regelafstand of lettertype (wat een ongetwijfeld voordeel is), maar je bent dan helaas ook vet en cursief, subscript en superscript kwijt (wat wellicht een nadeel is). Bekijk eens de onderliggende HTML-code en ontdek het verschil. Aan jou om te oordelen wat het handigst werkt, naargelang de situatie.
+Je krijgt daardoor geen ongewenste veranderingen van tekengrootte, regelafstand of lettertype (wat een ongetwijfeld voordeel is), maar je bent dan helaas ook vet en cursief, subscript en superscript kwijt (wat weer een nadeel is). Bekijk eens de onderliggende HTML-code en ontdek het verschil. Aan jou om te oordelen wat het handigst werkt, naargelang de situatie.
 
 ## Samenvatting
 
 - In Stories wordt tekst onderliggend gecodeerd als **HTML**.
-- Je kunt wisselen tussen de normale weergave en de HTML-weergave met de _**Source**_-knop.
+- Je kunt wisselen tussen de normale weergave en de HTML-weergave via de _**Source**_-knop.
 - Wanneer je tekst kopieert en plakt uit Word, bevat de HTML-broncode mogelijks **Word-specifieke elementen en attributen**.
 - Die elementen en attributen hebben vaak geen enkel effect in Stories, maar ze vervuilen wel de HTML-broncode.
 - Bepaalde soorten opmaak (zoals koppen en direct toegepaste opmaak als vet, cursief, tekengrootte en regelafstand) worden in Stories overgenomen.

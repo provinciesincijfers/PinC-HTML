@@ -80,7 +80,7 @@ Tabellen kunnen ook lege cellen bevatten. In dat geval laat je de begintag onmid
 
 Hoe de tabel er exact uitziet, kan gedefinieerd worden met CSS. Door een class-attribuut toe te voegen bij het table-element en de classes te definiëren in CSS, kun je een onderscheid maken tussen verschillende soorten tabellen, die elk hun eigen stijl krijgen. Met CSS kun je tabellen voorzien van lijnen tussen de rijen, tussen de kolommen en rondom de tabel, kun je de thead en de tbody een verschillende opmaak geven, de witruimte tussen rijen en kolommen of tussen de tekst en de lijnen instellen, kun je cellen een achtergrondkleur geven, etc.
 
-Mommenteel hebben we maar één tabelstijl voorzien. Mocht je nood hebben aan andere tabelstijlen in HTML-bijlagen, dan kunnen we op aanvraag zorgen voor een uitbreiding van ons CSS-bestand (`moreinfo.css`).
+Mommenteel hebben we maar één tabelstijl voorzien en moet je geen class-attribuut gebruiken. Mocht je nood hebben aan andere tabelstijlen in HTML-bijlagen, dan kunnen we op aanvraag zorgen voor een uitbreiding van ons CSS-bestand (`moreinfo.css`) en verschillende tabelstijlen implementeren met verschillende classnamen.
 
 ## Samenvatting
 

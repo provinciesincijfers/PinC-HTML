@@ -8,7 +8,7 @@ Hoe de verschillende niveaus van kopjes er precies uitzien (tekengrootte, witrui
 
 Probeer het aantal niveaus te beperken. Momenteel hebben we in de CSS-stijl voor de HTML-bijlagen maximaal vier niveaus gedefinieerd (h1 t.e.m. h4). Een HTML-bijlage heeft normaal gezien slechts één **h1**-kop met de titel van de bijlage, helemaal bovenaan het document.
 
-## Description-veld
+## Description-veld (bronnentabel)
 
 In het Description-veld van de bronnentabel beginnen we met een algemene omschrijving, gevolgd door een opsomming van de indicatoren. De indicatoren worden voorafgegaan door een tussenkopje ‘Indicatoren’. We spreken af dat we daarvoor een **h3**-kopje gebruiken. Het kopje krijgt daardoor dezelfde opmaak als de andere kopjes in het dialoogvenster met de metadata (bv. het kopje ‘Beschrijving’).
 
@@ -40,6 +40,8 @@ Om in een kopje een fragment niet-vet te maken, gebruik je een **span**-element 
 <h3>Bouwvorm <span class="roman">van woongelegenheden op percelen met 1 woongelegenheid:</span></h3>
 ```
 
+In het voorbeeld hierboven wordt de tekst van het h3-kopje automatisch vet weergegeven. De inhoud van het span-element zal echter niet-vet weergegeven worden.
+
 N.B.: span is een inline-element dat voor heel wat verschillende doeleinden gebruikt kan worden. Doorgaans wordt het voorzien van een class-attribuut om een onderscheid te maken tussen de verschillende soorten span-elementen, en wordt daaraan een CSS-stijl gekoppeld. Inline-elementen zijn elementen die je alleen binnen een tekstblok (alinea, kopje, lijstitem, tabelcel, ...) kunt gebruiken.
 
 ### Lijstitems met tussenkopjes
@@ -66,7 +68,7 @@ We spreken af dat we daar in zo’n geval een **h3**-kopje voor gebruiken, bv.:
 - HTML kent zes niveaus van (tussen)koppen: **h1**, **h2**, **h3**, **h4**, **h5** en **h6**.
 - De tekengrootte neemt af voor elk volgend niveau.
 - De koppen worden automatisch vet weergegeven.<br/><br/>
-- In de HTML-velden van de bronnentabel gebruiken we **h3** voor het kopje ‘Indicatoren’.
+- In het Description-veld van de bronnentabel gebruiken we **h3** voor het kopje ‘Indicatoren’.
 - In de HTML-bijlagen gebruiken we **h1** voor de titel van de bijlage en gebruiken we **h2**, **h3** en **h4** voor de volgende niveaus.
 - In de HTML-bijlagen kun je een **span**-element met een `class="roman"`-attribuut gebruiken wanneer je uitzonderlijk een deel van een tussenkop niet-vet wilt weergeven.
 - In de HTML-bijlagen kun je een **h3**-kopje gebruiken binnen een lijstitem (li-element).

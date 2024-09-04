@@ -13,13 +13,13 @@ Op een aantal plaatsen is whitespace optioneel. Of er whitespace staat of niet, 
 Dat betekent bijvoorbeeld dat deze twee HTML-tags volledig equivalent zijn:
 
 ```
-<img src="images/statbel_loop_schema.png" width="75%" alt="loop van de bevolking – schema"/>
+<img src="images/statbel_loop_schema.png" width="600px" alt="loop van de bevolking – schema"/>
 ```
 
 ```
 <img
 	src="images/statbel_loop_schema.png"
-	width="75%"
+	width="600px"
 	alt="loop van de bevolking – schema"
 />
 ```
@@ -81,7 +81,7 @@ Daarnaast kun je ook gebruikmaken van een aantal speciale soorten spaties (elk m
 | U+200A  | hair space                                      |
 | U+200B  | zero width space                                |
 
-Een _em space_ (em-spatie) is een extra brede spatie waarvan de breedte overeenkomt met de tekengrootte. Bij een tekstgrootte van 10 punt is zo’n spatie dus ook 10 punt breed. Dat komt in de meeste lettertypen overeen met ruwweg de breedte van een hoofdletter M, vandaar de naam _em space_. Een _en space_ (en-spatie) is half zo breed.
+Een _em space_ (em-spatie) is een extra brede spatie waarvan de breedte overeenkomt met de tekengrootte. Bij een tekengrootte van 10 punt is zo’n spatie dus ook 10 punt breed. Dat komt in de meeste lettertypen overeen met ruwweg de breedte van een hoofdletter M, vandaar de naam _em space_. Een _en space_ (en-spatie) is half zo breed.
 
 Een _figure space_ heeft de breedte van een cijfer, een _punctuation space_ heeft de breedte van een punt of een komma.
 
@@ -91,7 +91,7 @@ De _zero width space_ tenslotte is een spatie met een breedte van 0. Je vraagt 
 
 Niet alle spaties uit bovenstaande tabel zijn in elk lettertype beschikbaar, maar je kunt ze wel probleemloos gebruiken in PinC.
 
-Je al deze speciale spaties invoegen als een character reference, bv. `&#x2003;` voor een em-spatie.
+Je kunt al deze speciale spaties invoegen als een character reference, bv. `&#x2003;` voor een em-spatie.
 
 ## Whitespace in PinC
 
@@ -109,6 +109,8 @@ In de praktijk maakt dit het ons echter knap lastiger. Stel dat we het stukje HT
 </ul>
 ```
 
+Je merkt dat overal waar we een regeleinde hebben geplaatst, er nu ongevraagd een `<br/>`-tag is bijgekomen.
+
 Los van het feit dat bovenstaande code nooit zonder kleerscheuren door een validator raakt (zie volgend hoofdstuk), levert het ook volgend belabberd resultaat op, met veel ongewenste blanco regels:
 
 > <p>Op basis van Rijksregistergegevens krijgen we zicht op:</p><br/>
@@ -121,7 +123,7 @@ Los van het feit dat bovenstaande code nooit zonder kleerscheuren door een valid
 
 De enige manier om dit ongewenste resultaat te vermijden, is alle regeleinden (en tabs) uit ons HTML-fragment te verwijderen. Swing voegt dan geen extra br-tags in.
 
-In de HTML-velden van de bronnentabel kunnen we dus jammer genoeg geen overzichtelijk opgemaakte HTML-code gebruiken, maar zijn we gedoemd om er een onoverzichtelijk rommeltje van te maken:
+In de HTML-velden van de bronnentabel kunnen we daardoor dus jammer genoeg geen overzichtelijk opgemaakte HTML-code gebruiken, maar zijn we gedoemd om er een onoverzichtelijk en chaotisch rommeltje van te maken:
 
 ```
 <p>Op basis van Rijksregistergegevens krijgen we zicht op:</p><ul><li>het aantal private

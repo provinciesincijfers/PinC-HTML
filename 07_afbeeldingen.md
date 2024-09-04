@@ -20,7 +20,7 @@ In het voorbeeld hierboven werd verwezen naar een afbeelding in een submap. De a
 
 > *Let echter op met afbeeldingen die elders op het internet staan: daar heb je immers geen controle over. Op zekere dag kan de afbeelding verdwenen zijn, of vervangen zijn door een compleet andere afbeelding. Daarom beperken we ons beter tot afbeeldingen die we zelf hosten (d.w.z. die we zelf op onze eigen webserver plaatsen en waar we dus altijd zelf de controle over behouden).*
 
-Door een `width`- en/of een `height`-attribuut op te geven, kun je de afbeelding schalen (vergroten of verkleinen). Geef je deze attributen niet op, dan wordt de afbeelding op de oorspronkelijke grootte getoond. Stel dat je de afbeelding te groot vindt en dat je ze wilt verkleinen, dan kun je een kleinere afmeting opgeven, uitgedrukt in pixels.
+Door een `width`- en/of een `height`-attribuut op te geven, kun je de afbeelding schalen (vergroten of verkleinen). Geef je deze attributen niet op, dan wordt de afbeelding normaal gezien op de oorspronkelijke grootte getoond (maar de grootte kan ook via CSS bepaald worden). Als je de afbeelding te groot vindt en wilt verkleinen, dan kun je met width of height een kleinere afmeting opgeven, uitgedrukt in pixels.
 
 > *N.B.: browsers accepteren doorgaans ook relatieve afmetingen, opgegeven als percentages, maar strikt genomen is dat geen geldige HTML. Je kunt percentages wel geldig opgeven met CSS. Maar let op: een breedte van 50% betekent niet de helft van de oorspronkelijke afbeeldingsbreedte, maar de helft van de beschikbare ruimte tussen linker- en rechtermarge.*
 
@@ -36,12 +36,14 @@ Los daarvan kunnen de afmetingen ook beïnvloed worden door de CSS-stijl die wor
 
 ## Afbeeldingen in HTML-bijlagen op PinC
 
+Voor afbeeldingen in de HTML-bijlagen hebben we een map `images` gecreëerd, waarnaar je de afbeeldingen kunt uploaden. Die submap bevindt zich binnen de map waarnaar je de HTML-bestanden uploadt. In je HTML-bestand gebruik je dan `src="images/..."`, waarbij je de puntjes vervangt door de bestandsnaam van de afbeelding (zoals in het eerdere voorbeeld).
+
 Voor wat betreft de HTML-bijlagen op PinC hebben we voorzien dat je eventuele afbeeldingen op twee manieren kunt plaatsen, namelijk:
 
 - zonder kader, tegen de linkermarge;
 - in een kader over de volledige breedte van de bijlage.
 
-Wil je een afbeelding tegen de linkermarge plaatsen, plaats het img-element dan gewoon tussen twee tekstblokken (alinea’s, kopjes, lijstitems, ...) in:
+Wil je een afbeelding tegen de linkermarge plaatsen, plaats het img-element dan gewoon tussen twee tekstblokken (d.w.z. tussen alinea’s, kopjes, lijstitems, ...) in:
 
 ```
 <p>...</p>
@@ -63,13 +65,13 @@ Door `class="border"` toe te voegen aan het img-element, krijgt de afbeelding ee
 
 Voorlopig zijn dat de twee manieren die we voorzien hebben om (grotere) afbeeldingen te plaatsen. Mocht er behoefte zijn aan andere manieren om afbeeldingen te plaatsen, dan zullen we op aanvraag de nodige CSS-stijl voorzien en de instructies hier toevoegen.
 
-N.B.: div (_division_) is een element dat voor heel wat verschillende doeleinden gebruikt kan worden. Doorgaans wordt het voorzien van een class- of een id-attribuut om een onderscheid te maken tussen de verschillende soorten div-elementen, en wordt daaraan een CSS-stijl gekoppeld. In tegenstelling tot p-elementen kun je div-elementen binnen elkaar nesten, m.a.w. binnen een div-element kun je weer andere div-elementen creëren. Complexe webpagina’s zijn vaak opgebouwd uit heel veel verschillende div-elementen.
+N.B.: **div** (_division_) is een element dat voor heel wat verschillende doeleinden gebruikt kan worden. Doorgaans wordt het voorzien van een class- of een id-attribuut om een onderscheid te maken tussen de verschillende soorten div-elementen, en wordt daaraan een CSS-stijl gekoppeld. In tegenstelling tot p-elementen kun je div-elementen binnen elkaar nesten, m.a.w. binnen een div-element kun je weer andere div-elementen creëren. Complexe webpagina’s zijn vaak opgebouwd uit heel veel verschillende div-elementen.
 
 ## Bestandsformaten voor afbeeldingen
 
 Verder moet je nog het volgende weten over afbeeldingen: bepaalde afbeeldingsformaten, zoals bijvoorbeeld PNG of GIF, laten toe om delen van de afbeelding transparant te maken, zodat de achtergrondkleur van de webpagina zichtbaar wordt. Andere afbeeldingsformaten, zoals bijvoorbeeld JPG of BMP, hebben die eigenschap niet.
 
-Ook is er een belangrijk onderscheid tussen enerzijds bitmap- of rasterafbeeldingen, zoals bijvoorbeeld PNG of JPG, en anderzijds en vectorafbeeldingen, zoals bijvoorbeeld SVG of EPS. Bitmapafbeeldingen bestaan uit pixels en zijn uitermate geschikt voor foto’s. Wanneer je een bitmapafbeelding vergroot of erop inzoomt, dan worden die pixels uitvergroot en wordt het beeld waziger. Vectorafbeeldingen daarentegen bestaan uit meetkundige objecten en zijn uitermate geschikt voor afbeeldingen die uit lijntekeningen en tekst bestaan. Wanneer je een vectorafbeelding vergroot of erop inzoomt, blijft de afbeelding er haarscherp uitzien!
+Ook is er een belangrijk onderscheid tussen enerzijds bitmap- of rasterafbeeldingen, zoals bijvoorbeeld PNG of JPG, en anderzijds vectorafbeeldingen, zoals bijvoorbeeld SVG of EPS. Bitmapafbeeldingen bestaan uit pixels en zijn uitermate geschikt voor foto’s. Wanneer je een bitmapafbeelding vergroot of erop inzoomt, dan worden die pixels uitvergroot en wordt het beeld waziger. Vectorafbeeldingen daarentegen bestaan uit meetkundige objecten en zijn uitermate geschikt voor afbeeldingen die uit lijntekeningen en tekst bestaan. Wanneer je een vectorafbeelding vergroot of erop inzoomt, blijft de afbeelding er haarscherp uitzien!
 
 Dat staat volledig los van HTML en CSS, maar het is iets waar je rekening mee moet houden wanneer je een afbeelding ontwerpt of laat ontwerpen voor gebruik in een webpagina.
 
@@ -87,7 +89,7 @@ Dat staat volledig los van HTML en CSS, maar het is iets waar je rekening mee mo
 
 `div`: divisie (algemeen blok-element) – attribuut: `class`: classnaam
 
-`img`: afbeelding – attributen: `alt` (alternatieve tekst), `class`: classnaam, `src` (URL of pad naar de afbeelding)
+`img`: afbeelding – attributen: `alt` (alternatieve tekst), `class`: classnaam, `src` (URL of pad naar de afbeelding), `width` (breedte in pixels), `height` (hoogte in pixels)
 
 ___
 Volgend hoofdstuk: [Titels en tussenkopjes](08_koppen.md)
