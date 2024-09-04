@@ -135,4 +135,5 @@ Je krijgt daardoor geen ongewenste veranderingen van tekengrootte, regelafstand 
 - Die elementen en attributen hebben vaak geen enkel effect in Stories, maar ze vervuilen wel de HTML-broncode.
 - Bepaalde soorten opmaak (zoals koppen en direct toegepaste opmaak als vet, cursief, tekengrootte en regelafstand) worden in Stories overgenomen.
 - Andere soorten opmaak (zoals Word-stijlen, met uitzondering van koppen 1 t.e.m. 6) wordt niet in Stories overgenomen.
-- Door te kiezen voor **plakken als platte tekst** in plaats van gewoon plakken gaat alle opmaak verloren en houd je enkel de tekst (en schone, niet-vervuilde HTML-code) over. Let op: herstel hier zelf vet en cursief, subscript en superscript waar nodig.
+- Door te kiezen voor **plakken als platte tekst** in plaats van gewoon plakken gaat alle opmaak verloren en houd je enkel de tekst (en schone, niet-vervuilde HTML-code) over. Let op: herstel hier zelf vet en cursief, subscript en superscript waar nodig.<br/><br/>
+- HTML-tags kunnen de werking van **get-statements** verstoren. Zorg ervoor dat er binnen een get-statement geen enkele HTML-tag staat.
