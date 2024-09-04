@@ -113,7 +113,7 @@ Uit bovenstaande voorbeelden wordt duidelijk dat de HTML-broncode van een tekstt
 
 Als je dan ook nog eens een hoop get-statements aan de tekst toevoegt, wordt het helemaal een soep... Maar dat is een ander verhaal. Get-statements in Stories vallen buiten het bestek van deze HTML-handleiding.
 
-> Toch kunnen we alvast deze tip meegeven: als een get-statement niet het verwachte resultaat maar een foutmelding oplevert, bekijk dan zeker eens de onderliggende HTML-code. Zorg ervoor dat er binnen het get-statement geen enkele HTML-tag staat!
+> _Toch kunnen we alvast deze tip meegeven: als een get-statement niet het verwachte resultaat maar een foutmelding oplevert, bekijk dan zeker eens de onderliggende HTML-code. Zorg ervoor dat er binnen het get-statement geen enkele HTML-tag staat!_
 
 ### Tekst opschonen
 
