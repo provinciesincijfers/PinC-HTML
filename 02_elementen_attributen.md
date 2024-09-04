@@ -70,25 +70,27 @@ Maar wat is dan het verschil? Het em-element (emphasis) wordt gebruikt om een st
 
 We spreken af dat we binnen PinC gewoon b en i gebruiken voor vet en cursief. Als we andere manieren van benadrukken nodig hebben, dan kunnen we daarvoor em en strong gebruiken en de gewenste opmaak opgeven via CSS.
 
+_N.B.: wanneer je vet en cursief gebruikt in Stories en vervolgens de HTML-broncode bekijkt, zul je merken dat Stories het i-element gebruikt voor cursieve tekst en het strong-element voor vette tekst. Niet echt logisch, maar het werkt natuurlijk wel._
+
 ### Onderstrepen
 
 Er is ook een element om tekst te onderstrepen: **u** (underline). We raden het gebruik ervan echter sterk af, omdat de gebruiker gewoon is dat (enkel) hyperlinks onderstreept weergegeven worden in HTML-documenten.
 
-Een stukje onderstreepte tekst dat geen link is, werkt daarom contra-intuïtief. Heel wat gebruikers zullen daardoor de neiging hebben om op de tekst te klikken. We beschikken al over minstens twee manieren om tekst te benadrukken: vet en cursief. Tekst onderstrepen is daarom in de meeste gevallen niet nodig.
+Een stukje onderstreepte tekst dat geen link is, werkt daarom contra-intuïtief. Heel wat gebruikers zullen de neiging hebben om op de tekst te klikken. We beschikken al over minstens twee manieren om tekst te benadrukken: vet en cursief. Tekst onderstrepen is daarom in de meeste gevallen helemaal niet nodig.
 
 ### Alinea’s
 
-Eén van de elementen die je het vaakst zult gebruiken, is wellicht het **p**-element (_paragraph_), waarmee je een alinea creëert. Een alinea is een op zichzelf staand blokje tekst, dat doorgaans uit meerdere zinnen bestaat. Boven en onder elke alinea zal de browser automatisch witruimte toevoegen. Daardoor lijkt het alsof er tussen de alinea’s telkens een blanco regel staat. Met CSS kan die ruimte eventueel vergroot of verkleind worden.
+Eén van de elementen die je het vaakst zult gebruiken, is wellicht het **p**-element (_paragraph_), waarmee je een alinea creëert. Een alinea is een op zichzelf staand blokje tekst, dat doorgaans uit meerdere zinnen bestaat. Boven en onder elke alinea zal de browser automatisch witruimte toevoegen. Daardoor lijkt het alsof er tussen de alinea’s telkens een blanco regel staat. Met CSS kan die ruimte eventueel vergroot of verkleind worden. In Stories krijg je standaard ongeveer een halve witregel tussen de alinea’s.
 
 Als je om een of andere reden een regeleinde wilt toevoegen binnen een alinea, dan kun je daarvoor een **br**-element (_line break_) gebruiken (`<br/>`).
 
 Wat je _niet_ moet doen, is twee opeenvolgende br-elementen gebruiken om een blanco regel te creëren (`<br/><br/>`). In dat geval gebruik je beter gewoon een nieuwe alinea.
 
-Wat je ook niet moet doen, is lege alinea’s gebruiken (`<p></p>` of `<p>&nbsp;</p>`) om extra blanco regels te creëren. Houd je aan de voorziene witruimte tussen alinea’s en andere elementen.
+Wat je ook niet moet doen, is lege alinea’s gebruiken (`<p></p>` of `<p>&nbsp;</p>`) om extra witruimte te creëren. Houd je aan de voorziene witruimte tussen alinea’s en andere elementen.
 
 ## Attributen
 
-Bij elk HTML-element kun je één of meerdere **attributen** meegeven. Met een attribuut voeg je extra informatie toe aan het element. Attributen vertellen iets meer over het element in kwestie, of zorgen ervoor dat het er wat anders uitziet of zich wat anders gedraagt dan zonder het attribuut.
+Bij zowat elk HTML-element kun je één of meerdere **attributen** meegeven. Met een attribuut voeg je extra informatie toe aan het element. Attributen vertellen iets meer over het element in kwestie, of zorgen ervoor dat het er wat anders uitziet of zich wat anders gedraagt dan zonder het attribuut.
 
 Attributen geef je altijd op bij een begintag, nooit bij een eindtag.
 
@@ -112,7 +114,7 @@ Een ander voorbeeld:
 
 In dit voorbeeld zie je een img-element met twee attributen (een **src**-attribuut en een **alt**-attribuut). Wanneer een element twee of meer attributen heeft, dan worden ze van elkaar gescheiden door een spatie.
 
-In tegenstelling tot een id-attribuut kun je een src- of een alt-attribuut niet zomaar bij om het even welk element gebruiken. Deze attributen horen specifiek bij het img-element: de inhoud van het src-attribuut bepaalt hier welke afbeelding er geplaatst zal worden, en de inhoud van het alt-attribuut bepaalt de tekst die als alternatief weergegeven kan worden in plaats van de afbeelding (bijvoorbeeld door spraaksoftware voor blinden en slechtzienden).
+In tegenstelling tot een id-attribuut kun je een src- of een alt-attribuut niet zomaar bij om het even welk element gebruiken. Deze attributen horen specifiek bij het img-element: de inhoud van het src-attribuut bepaalt hier welke afbeelding er geplaatst zal worden, en de inhoud van het alt-attribuut bepaalt de tekst die als alternatief weergegeven kan worden in plaats van de afbeelding (bijvoorbeeld door spraaksoftware voor blinden en slechtzienden, of wanneer de afbeelding om een of andere reden niet geladen kan worden).
 
 In het voorbeeld zal de afbeelding `logo.png` (in een submap genaamd `images`) ingevoegd worden en zal als alternatieve tekst `bedrijfslogo` gebruikt worden.
 
@@ -131,17 +133,29 @@ Bij eenzelfde element mag elk attribuut maar één keer voorkomen. Bij een img-e
 
 We spreken af dat we de attribuutwaarden altijd tussen **dubbele aanhalingstekens** plaatsen (`"..."`). In theorie mag je ook enkele aanhalingstekens gebruiken (`'...'`), maar in de praktijk doen we dat alleen in het uitzonderlijke geval waar we in de attribuutwaarde een dubbel aanhalingsteken nodig zouden hebben.
 
+### Style en class
+
 Naast het id-attribuut zijn er nog enkele ‘universele’ attributen die je bij zowat elk element kunt gebruiken, namelijk het **style**-attribuut en het **class**-attribuut.
 
 Over het style-attribuut kunnen we kort zijn: we spreken af dat we het in de praktijk niet gebruiken, of enkel in héél uitzonderlijke omstandigheden. Met een style-attribuut kun je in de HTML-broncode rechtstreeks CSS-stijlinformatie meegeven (bv. lettertype, tekengrootte, marges, kleuren enz.).
 
-Veel beter is het om die stijlinformatie op een onrechtstreekse manier aan te roepen. Dat doen we via een **class**-attribuut. De stijlinformatie zelf is op voorhand gedefinieerd en zit veilig afgescheiden in een apart CSS-bestand. Het voordeel van deze manier van werken is dat een aanpassing aan de stijlen automatisch toegepast wordt op alle HTML-elementen die van dezelde class gebruikmaken. Op die manier wordt gezorgd voor een uniforme opmaak over de verschillende HTML-documenten heen. Praktische voorbeelden van welke classes je (in HTML-bijlagen) kunt gebruiken, komen verderop in deze handleiding nog uitgebreid aan bod.
+Veel beter is het om die stijlinformatie op een onrechtstreekse manier aan te roepen. Dat doen we via een **class**-attribuut. De stijlinformatie zelf is op voorhand gedefinieerd en zit veilig afgescheiden in een apart CSS-bestand. Het voordeel van deze manier van werken is dat een aanpassing aan de stijlen automatisch toegepast wordt op alle HTML-elementen die van dezelde class gebruikmaken. Op die manier wordt gezorgd voor een uniforme opmaak over de verschillende HTML-documenten heen. Praktische voorbeelden van welke classes je (in HTML-bijlagen) kunt gebruiken, komen verderop in deze handleiding nog uitgebreid aan bod (zie: [Opsommingen (lijsten)](05_opsommingen.md)).
+
+Wanneer je meer dan één class wilt toepassen op een element, dan kan dat! Je kunt maar één class-attribuut gebruiken, maar in plaats van één classnaam op te geven als attribuutwaarde, kun je ook een lijst van meerdere classnamen opgeven met telkens een spatie ertussen, bv.:
+
+```
+<li class="bold open">...</li>
+```
+
+Bovenstaand voorbeeld zal zowel de class `bold` als de class `open` toepassen op het li-element.
+
+In Stories kun je ongewild style-attributen introduceren wanneer je tekst plakt uit andere toepassingen, bijvoorbeeld uit een Word-document. De eventueel in Word toegepaste tekenopmaak, zoals lettertype of tekengrootte, wordt dan overgenomen via een style-attribuut. Als je dat wilt vermijden, kun je de tekst plakken met Shift+Ctrl+V in plaats van met Ctrl+V (zie: [HTML in Stories](11_stories.md)). Op die manier wordt enkel de platte tekst geplakt, zonder de bijbehorende opmaak.
 
 ## Kleine letters of hoofdletters
 
 In XHTML is de afspraak dat we voor namen van elementen en attributen altijd **kleine letters** gebruiken. In ‘gewone’ HTML mag je in principe ook hoofdletters gebruiken, en mag je zelfs hoofd- en kleine letters door elkaar mengen. Maar dat laatste is ontzettend slordig en wordt ten zeerste afgeraden. In deze handleiding gebruiken we XHTML, en dus kleine letters, in alle voorbeelden.
 
-Ook in attribuutwaarden spreken we af dat we bij voorkeur kleine letters gebruiken.
+Ook voor attribuutwaarden spreken we af dat we bij voorkeur kleine letters gebruiken (bv. voor id’s of classnamen).
 
 ## Samenvatting
 
@@ -149,7 +163,7 @@ Ook in attribuutwaarden spreken we af dat we bij voorkeur kleine letters gebruik
 - De meeste elementen hebben een **begintag** en een **eindtag**.
 - Die tags herken je aan de **kleiner-dan-** en **groter-dan-tekens**.
 - De eindtag herken je aan de **schuine streep** na het kleiner-dan-teken.
-- Tussen de begintag en de eindtag staat de eventuele **inhoud** van het element.
+- Tussen de begintag en de eindtag staat de eventuele **inhoud** (**content**) van het element.
 - Sommige elementen kunnen geen inhoud hebben en worden voorgesteld door één tag die tegelijkertijd als begin- en eindtag fungeert. Dergelijke elementen herken je in XHTML aan de schuine streep vóór het groter-dan-teken.
 - We gebruiken altijd kleine letters in de namen van de elementen.<br/><br/>
 - Elk element kan één of meer **attributen** hebben, die **bijkomende informatie** bevatten over het element.
@@ -163,6 +177,7 @@ Ook in attribuutwaarden spreken we af dat we bij voorkeur kleine letters gebruik
 - Bij zowat elk element kun je een **id**-attribuut en een **class**-attribuut gebruiken.
 - De waarde van een id-attribuut moet **uniek** zijn binnen het HTML-document. Het id-attribuut wordt immers gebruikt om vanop een andere plaats naar het betreffende element te verwijzen.
 - Het class-attribuut verwijst naar een voorgedefinieerde **CSS-stijl** die de opmaak van het element bepaalt.
+- Je kunt **meerdere classes** combineren door één class-attribuut op te nemen met als attribuutwaarde een lijst van meerdere classnamen met telkens een spatie ertussen.
 - Met een **style**-attribuut kun je de CSS-stijl van het betreffende attribuut definiëren, maar we spreken af dat we dat alleen maar doen bij wijze van zeer hoge uitzondering.
 
 ### HTML-elementen in dit hoofdstuk

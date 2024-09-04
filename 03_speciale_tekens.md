@@ -6,11 +6,11 @@ Vóór we verdergaan met de bespreking van de verschillende HTML-elementen en �
 
 In den beginne was er de **ASCII**-code, waar je misschien ooit nog eens over gehoord hebt. ASCII (_American Standard Code for Information Interchange_) is een manier om letters, cijfers en leestekens voor te stellen in computersystemen. Elk teken wordt daarbij voorgesteld door een getal.
 
-De ASCII-code gebruikt de getallen 0 t.e.m. 127 en bevat daarmee dus 128 verschillende tekens. Dat moet ruimschoots volstaan, dachten de Amerikanen die de code in de jaren 60 van de vorige eeuw ontwierpen. In ASCII krijgt elke hoofdletter, elke kleine letter, elk cijfer, elk leesteken en de spatie een eigen code. Dat zijn samen minder dan 128 tekens. De resterende codes worden voor speciale doeleinden gebruikt. Zo bevat de ASCII-code ook codes voor een tab, een regeleinde, een backspace, een ‘escape’, enz.
+De ASCII-code gebruikt daarvoor de getallen 0 t.e.m. 127 en bevat daarmee dus 128 verschillende tekens. Dat moet ruimschoots volstaan, dachten de Amerikanen die de code in de jaren 60 van de vorige eeuw ontwierpen. In ASCII krijgt elke hoofdletter, elke kleine letter, elk cijfer, elk leesteken en de spatie een eigen code. Dat zijn samen minder dan 128 tekens. De resterende codes worden voor speciale doeleinden gebruikt. Zo bevat de ASCII-code ook codes voor een tab, een regeleinde, een backspace, een ‘escape’, enz.
 
 Voor andere talen dan Engels volstonden 128 codes echter niet. Daarom kwamen er al gauw meerdere uitbreidingen met 256 in plaats van 128 codes. Maar de ‘standaard’ ontaardde al snel in aparte substandaarden voor verschillende regio’s: één voor West-Europese talen, één voor Oost-Europese talen, één met het Russisch alfabet, enz. Microsoft en Apple gebruikten bovendien hun eigen uitbreidingen, die niet onderling compatibel waren. Daardoor kreeg bijvoorbeeld de é (e met accent aigu) op een Windows-computer een andere code toebedeeld dan op een Apple-computer, waardoor een Franse tekst niet zomaar tussen beide systemen uitgewisseld kon worden. In al deze tekensets werd één byte (8 bits) per karakter gebruikt.
 
-Gelukkig hebben we ondertussen de **Unicode**-standaard, die zowat elk alfabet en elk teken bevat dat ergens op Aarde gebruikt wordt. Unicode is dus een bijzonder uitgebreide tekenset. Unicode is nog steeds gebaseerd op ASCII: de ons vertrouwde letters, cijfers en leestekens hebben nog steeds dezelfde codes als in ASCII (codes 0-127), maar daarnaast bevat Unicode tal van bijkomende accentletters, wiskundige, technische en andere symbolen, en andere alfabetten zoals Grieks, Cyrillisch, Thais, Hiragana en Katakana (Japans), Chinese, Japanse en Koreaanse karakters, etc. Unicode wordt nog steeds verder ontwikkeld en uitgebreid. Daarbij wordt erover gewaakt dat elke nieuwe versie nog steeds backwards compatible is met eerdere versies. Op het ogenblik van dit schrijven (medio 2024) bevat Unicode versie 15.1 zo’n 149.813 verschillende karakters en 161 _scripts_ (alfabetten). Daarbij zitten ook alfabetten die niet van links naar rechts, maar van rechts naar links geschreven worden, zoals Hebreeuws of Arabisch.
+Gelukkig hebben we ondertussen de **Unicode**-standaard, die zowat elk alfabet en elk teken bevat dat ergens op Aarde gebruikt wordt. Unicode is dus een bijzonder uitgebreide tekenset. Unicode is nog steeds gebaseerd op ASCII: de ons vertrouwde letters, cijfers en leestekens worden in Unicode nog steeds voorgesteld door dezelfde getallen als in ASCII (codes 0-127), maar daarnaast bevat Unicode tal van bijkomende accentletters, wiskundige, technische en andere symbolen, en andere alfabetten zoals Grieks, Cyrillisch, Thais, Hiragana en Katakana (Japans), Chinese, Japanse en Koreaanse karakters, etc. Unicode wordt nog steeds verder ontwikkeld en uitgebreid. Daarbij wordt erover gewaakt dat elke nieuwe versie nog steeds backwards compatible is met eerdere versies. Op het ogenblik van dit schrijven (medio 2024) bevat Unicode versie 15.1 zo’n 149.813 verschillende karakters en 161 _scripts_ (alfabetten). Daarbij zitten ook alfabetten die niet van links naar rechts, maar van rechts naar links geschreven worden, zoals Hebreeuws of Arabisch.
 
 Let op: dat de Unicode-tekenset 149.813 verschillende tekens bevat, betekent _niet_ dat je al die tekens ook in de praktijk kunt gebruiken in je HTML- of andere documenten. Welke tekens beschikbaar zijn hangt immers af van welk **lettertype** je gebruikt. Elk lettertype (_font_) bevat slechts een kleine subset van de volledige Unicode-tekenset, omdat het anders onwerkbaar zou worden en omdat je de meeste van die tekens toch nooit nodig hebt.
 
@@ -40,11 +40,11 @@ Maar tegenwoordig is het veel eenvoudiger: in je HTML-document kun je nu gelijk 
 <p>Slechts één of twee ‘ideeën’ worden correct geïnterpreteerd!</p>
 ```
 
-Zeg nu zelf, welk van beide versies verkies je? De eerste alinea, die vol staat met character entity references, of de tweede, waarin de references vervangen werden door de overeenkomstige Unicode-karakters?
+Zeg nu zelf, welk van beide versies verkies je? De eerste alinea, die vol staat met character entity references, of de tweede, waarin de references vervangen werden door de overeenkomstige Unicode-karakters? De webbrowser zal beide alinea’s op dezelfde manier weergeven (op voorwaarde dat je `<meta charset="utf-8"/>` hebt gebruikt).
 
 ### Character entity references
 
-Een charcter entity reference is een verwijzing (reference) naar een **character entity**. HTML heeft een hele reeks ingebouwde character entities: entiteiten die een karakter voorstellen. Elke entity heeft een naam, die zodanig gekozen is dat je de betekenis ervan makkelijk kunt onthouden. Zo stelt de entity met de naam `eacute` de kleine letter e met accent aigu voor (in het Engels: acute) en de entity `iuml` de kleine letter i met trema (in het Engels, overgenomen van het Duits: umlaut). De entities `lsquo` en `rsquo` staan dan weer voor _left single quote_ (linker enkel aanhalingsteken) en _right single quote_ (rechter enkel aanhalingsteken).
+Een charcter entity reference, zoals we in het voorbeeld hierboven gebruikt hebben, is een verwijzing (reference) naar een **character entity**. HTML heeft een hele reeks ingebouwde character entities: entiteiten die een karakter voorstellen. Elke entity heeft een naam, die zodanig gekozen is dat je de betekenis ervan makkelijk kunt onthouden. Zo stelt de entity met de naam `eacute` de kleine letter e met accent aigu voor (in het Engels: acute) en de entity `iuml` de kleine letter i met trema (in het Engels, overgenomen van het Duits: umlaut). De entities `lsquo` en `rsquo` staan dan weer voor _left single quote_ (linker enkel aanhalingsteken) en _right single quote_ (rechter enkel aanhalingsteken).
 
 Een **character entity reference** herken je aan de **ampersand** (`&`) en de **puntkomma** (`;`), met daartussen de naam van de betreffende character entity.
 
@@ -63,21 +63,28 @@ Er zijn slechts een handjevol uitzonderingen voor karakters waar we tóch verpli
 Schrijf dus niet: `D&A`, maar wel: `D&amp;A`.\
 Schrijf niet: `<100`, maar wel: `&lt;100`.
 
-Verder is er nóg een character entity reference die in de praktijk wel eens van pas kan komen:
+Ook de (rechte) aanhalingstekens zullen we in uitzonderlijke gevallen met een character entity reference noteren, bijvoorbeeld wanneer je een dubbel aanhalingsteken nodig zou hebben in een attribuutwaarde die tussen dubbele aanhalingstekens staat:
+
+`&apos;` enkel aanhalingsteken, Engels: apostrophe (')\
+`&quot;` dubbel aanhalingsteken, Engels: quote (")
+
+Verder is er nóg een character entity reference die in de praktijk wel eens van pas kan komen of die je vroeg of laat ergens zult aantreffen:
 
 `&nbsp;` vaste spatie (Engels: no-break space)
 
-Een vaste spatie gebruik je ter vervanging van een gewone spatie op plaatsen waar je wilt vermijden dat er naar een volgende regel overgegaan wordt, bijvoorbeeld wanneer je een getal en de erbij horende eenheid wilt samenhouden (bv. `150&nbsp;m`). In theorie kun je het ook zonder character entity reference doen en een vaste spatie gewoon als Unicode-teken opnemen (met Alt+0160), maar het nadeel is dat je dan in de broncode geen verschil meer ziet met een gewone spatie (maar in een goede teksteditor zul je tóch op een of andere manier een verschil zien).
+Een vaste spatie gebruik je ter vervanging van een gewone spatie op plaatsen waar je wilt vermijden dat er naar een volgende regel overgegaan wordt, bijvoorbeeld wanneer je een getal en de erbij horende eenheid wilt samenhouden (bv. `150&nbsp;m`). In theorie kun je het ook zonder character entity reference doen en een vaste spatie gewoon als Unicode-teken opnemen (met Alt+0160), maar het nadeel is dat je dan in de broncode geen verschil meer ziet met een gewone spatie (maar in een goede teksteditor zul je tóch op een of andere manier een verschil kunnen zien).
 
 ### Character references
 
 Behalve met character *entity* references, die aan de hand van een makkelijk te onthouden naam verwijzen naar een voorgedefinieerde character entity, kun je ook gebruikmaken van **character references**. Een character reference verwijst rechtstreeks naar een Unicode-karakter, zonder de omweg via een character entity. De verwijzing kan op twee manieren gebeuren: aan de hand van de **decimale code** van het karakter of aan de hand van de **hexadecimale code** van het karakter.
 
-In de Unicode-tabellen op https://www.unicode.org/charts kun je voor om het even welk teken de bijbehorende code achterhalen. Daar worden de codes in hexadecimale vorm gegeven. Het zou ons hier te ver leiden om daar gedetailleerd op in te gaan, en daarom beperken we ons tot de essentie: de term ‘hexadecimaal’ verwijst naar een talstelsel met niet tien, maar zestien cijfers. De zestien hexadecimale cijfers zijn 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E en F. Hierbij staat de letter A voor de (decimale) waarde 10, de B voor 11, de C voor 12, de D voor 13, de E voor 14 en de F voor 15. In plaats van de hoofdletters A-F worden vaak ook kleine letters (a-f) gebruikt.
+In de Unicode-tabellen op https://www.unicode.org/charts kun je voor om het even welk teken de bijbehorende code achterhalen. Daar worden de codes in hexadecimale vorm gegeven. Het zou ons hier te ver leiden om daar gedetailleerd op in te gaan, en daarom beperken we ons tot de essentie: de term ‘hexadecimaal’ verwijst naar een talstelsel met niet tien, maar zestien cijfers. De zestien hexadecimale cijfers zijn 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E en F. Hierbij staat de letter A voor de (decimale) waarde 10, de B voor 11, de C voor 12, de D voor 13, de E voor 14 en de F voor 15. In plaats van de hoofdletters A-F worden in de praktijk vaak ook kleine letters (a-f) gebruikt.
 
 Vaak zul je zien dat naar een Unicode-teken verwezen wordt met een hoofdletter U gevolgd door een plusteken en vier of meer hexadecimale cijfers. Zo wordt bijvoorbeeld met `U+00A9` het copyright-symbool bedoeld. Het hexadecimale getal A9 komt overeen met een decimale waarde van 169.
 
-In HTML kun je een character reference herkennen aan een **ampersand** gevolgd door een **hekje** (`&#`), gevolgd door de code van het karakter en een **puntkomma**.
+> _Tip: je kunt de rekenmachine in Windows gebruiken om heel gemakkelijk hexadecimale naar decimale getallen om te zetten en omgekeerd. In plaats van de ‘Standaard’-modus kies je daartoe de modus ‘Programmeren’._
+
+In HTML kun je een character reference herkennen aan een **ampersand** gevolgd door een **hekje** (`&#`), gevolgd door de code (getalwaarde) van het karakter en een **puntkomma**.
 
 Een character reference lijkt dus een beetje op een character entity reference, maar in plaats van de naam van een entity staat er nu een hekje en een getal met de Unicode-waarde van het betreffende teken. Het getal kan zowel een decimaal getal als een hexadecimaal getal zijn. Om het verschil tussen beide duidelijk te maken, wordt een hexadecimaal getal ook nog eens voorafgegaan door een letter x.
 
@@ -150,14 +157,15 @@ Daarom raden we je ten sterkste af om een HTML-bijlage te editeren in Studio. Ve
 - Elk teken uit de Unicode-tekenset wordt geïdentificeerd aan de hand van een unieke **numerieke code**.
 - Unicode is een voortzetting van **ASCII**, en ASCII is nu een subset van Unicode.
 - We maken gebruik van **UTF-8** om Unicode-tekens voor te stellen.
-- UTF-8 gebruikt één of meerdere bytes om de tekens voor te stellen.
+- UTF-8 gebruikt één of meerdere bytes om de tekens voor te stellen (één byte voor tekens uit de ASCII-subset, meerdere bytes voor accentletters en andere speciale tekens).
 - Welke tekens je in de praktijk kunt gebruiken, hangt af van de beschikbaarheid ervan in het **lettertype** dat je gebruikt.
 - Bovenaan elk HTML-document plaatsen we een **meta**-tag om aan de browser duidelijk te maken dat ons document UTF-8 gebruikt.<br/><br/>
 - **Character entity references** maken gebruik van voorgedefinieerde **entities** met makkelijk te onthouden namen om accentletters en andere speciale tekens in een HTML-document op te nemen.
 - **Character references** verwijzen rechtstreeks naar de **numerieke code** van een teken. Dat kan op twee manieren: met een **decimale** of met een **hexadecimale** waarde.
+- Je kunt de ‘Programmeren’-modus in de rekenmachine van Windows gebruiken om hexadecimale getallen om te zetten naar decimale getallen en omgekeerd.
 - Je vindt tabellen met de codes van alle Unicode-tekens op https://www.unicode.org/charts.<br/><br/>
 - Sla een HTML-document altijd op met **UTF-8-codering**.
-- **Editeer HTML-bestanden niet in Studio** maar editeeer het bestand op je lokale computer en imorteer het daarna in PinC.
+- **Editeer HTML-bestanden niet in Studio** maar editeeer het bestand op je lokale computer met een teksteditor en imorteer het daarna in PinC.
 
 ___
 Volgend hoofdstuk: [De structuur van een HTML-document](04_html_document.md)

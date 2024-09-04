@@ -43,7 +43,11 @@ We bekijken het document wat nader:
 <!DOCTYPE html>
 ```
 
-Helemaal bovenaan zie je de document type declaration. Let wel: het eigenlijke document begint pas met het root element op de volgende regel. Eerdere versies van HTML gebruikten een veel langere en complexere doctype declaration, maar in HTML5 is het vrij simpel. Als je wat rondkijkt op het internet zul je ongetwijfeld heel wat HTML-documenten aantreffen zonder doctype declaration. De kans is bijzonder groot dat een browser het document ook zonder doctype declaration correct zal weergeven, maar in principe moet bovenstaande doctype declaration aanwezig zijn aan het begin van elk HTML5-document.
+Helemaal bovenaan zie je de document type declaration. Let wel: het eigenlijke document begint pas met het root element op de volgende regel. Eerdere versies van HTML gebruikten een veel langere en complexere doctype declaration, maar in HTML5 is het vrij simpel.
+
+Als je wat rondkijkt op het internet en de broncode van webpagina’s bekijkt, zul je ongetwijfeld heel wat HTML-documenten aantreffen zonder doctype declaration, of – erger nog! – met een doctype declaration die niet blijkt overeen te stemmen met de inhoud van het document.
+
+De kans is bijzonder groot dat een browser het document ook zonder doctype declaration correct zal weergeven, maar in principe moet bovenstaande doctype declaration aanwezig zijn aan het begin van elk HTML5-document.
 
 ```
 <html lang="nl-NL">
@@ -51,7 +55,7 @@ Helemaal bovenaan zie je de document type declaration. Let wel: het eigenlijke d
 
 Bij het root element, het html-element, zie je een **lang**-attribuut staan. Een lang-attribuut vertelt aan de webbrowser in welke taal de tekst binnen het element geschreven is. Als attribuutwaarde gebruik je hier een ISO-taalcode, eventueel aangevuld met een koppelteken en een ISO-land- of ‑regiocode. In het voorbeeld hierboven zie je `nl-NL`, waarmee standaard Nederlands bedoeld wordt.
 
-De land- en taalcodes zijn gedefinieerd in twee ISO standaarden: [ISO 639-1](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes) voor de taalcodes (twee kleine letters) en [ISO 3166-1](https://nl.wikipedia.org/wiki/ISO_3166-1) voor de landcodes (twee hoofdletters).
+De land- en taalcodes zijn gedefinieerd in twee ISO-standaarden: [ISO 639-1](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes) voor de taalcodes (twee kleine letters) en [ISO 3166-1](https://nl.wikipedia.org/wiki/ISO_3166-1) voor de landcodes (twee hoofdletters).
 
 Het lang-attribuut bij het html-element bepaalt de taal voor het ganse document. In het geval enkele delen van het document in een andere taal geschreven zouden zijn, dan zou je bij de betreffende elementen weer een lang-attribuut met een andere taalcode kunnen plaatsen.
 
@@ -73,7 +77,7 @@ Het **title**-element bevat de titel van het document. Hier plaats je een (voldo
 
 Het **link**-element koppelt een externe CSS-stylesheet aan het HTML-document. De stijldefinities in dat CSS-bestand (`moreinfo.css` in de submap `style`) zullen gebruikt worden om het HTML-document vorm te geven (lettertype, tekengrootte, marges, kleuren, etc.).
 
-Binnen de head kunnen nog meer meta- en link-elementen staan en kunnen ook nog CSS-stijlen gedefinieerd worden met een **style**-element. De head kan ook JavaScript-code bevatten in een **script**-element. Het voorbeeld hierboven is een eenvoudig head-element zoals in de HTML-bijlagen die we in PinC gebruiken.
+Binnen de head kunnen nog meer meta- en link-elementen staan en kunnen ook nog CSS-stijlen gedefinieerd worden met een **style**-element. De head kan ook JavaScript-code bevatten in een **script**-element. Het voorbeeld hierboven is een eenvoudig head-element zoals in de HTML-bijlagen die we in PinC gebruiken, zonder verdere extra’s.
 
 ```
 <body>
@@ -106,7 +110,7 @@ uit meerdere regels bestaan. -->
 <!--<h1>Inleiding</h1>-->
 ```
 
-Commentaren worden niet door de webbrowser weergegeven, maar houd er rekening mee dat een gebruiker de commentaren wel kan zien door de broncode van de pagina te bekijken. Houd de commentaarteksten dus relevant en plaats er geen gevoelige of geheime informatie (zoals wachtwoorden) in.
+Commentaren worden niet door de webbrowser weergegeven, maar houd er rekening mee dat een gebruiker de commentaren wel kan zien door de broncode van de pagina te bekijken. Houd de commentaarteksten dus relevant en plaats er zeker geen gevoelige of geheime informatie (zoals wachtwoorden) in.
 
 ## Samenvatting
 
@@ -114,7 +118,7 @@ Commentaren worden niet door de webbrowser weergegeven, maar houd er rekening me
 - Vóór het root element daat mogelijks nog een **document type declaration** die aangeeft om welk soort document het gaat.
 - Binnen het **head**-element staat informatie die betrekking heeft op het ganse document en kan een koppeling gemaakt worden met externe bestanden (bv. CSS of Javascript).
 - Binnen het **body**-element staat de eigenlijke inhoud van het document (tekst en afbeeldingen).
-- Om het even waar in het document kan er ook **commentaar** staan, die niet door de browser wordt weergegeven (maar die wel zichtbaar is wanneer je de broncode bekijkt).
+- Om het even waar in het document kan er ook **commentaar** staan, die niet door de browser wordt weergegeven (maar die die een gebruiker wel kan zien door de broncode te bekijken).
 
 ### HTML-elementen in dit hoofdstuk
 

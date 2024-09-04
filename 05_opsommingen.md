@@ -65,7 +65,7 @@ Dit wordt als volgt weergegeven in de browser:
   - Brugge
   - Oostende
 
-> *Let op: plaats het ul- of ol-element voor het volgende niveau altijd binnen een li-element. Sluit dat li-element pas af ná het ondergeschikte ul- of ol-element.*
+> *Let op: plaats het ul- of ol-element van het volgende niveau altijd **binnen een li-element**. Sluit dat li-element pas af ná het ondergeschikte ul- of ol-element.*
 
 Je kunt nog diepere niveaus maken. De webbrowser gebruikt voor elk ongenummerd niveau een ander type bullet. Het bullettype kan ook gewijzigd worden met CSS naar om het even welk Unicode-karakter of zelfs naar een (kleine) afbeelding. Met een **type**-attribuut kun je een bullettype kiezen uit een aantal voorgedefinieerde types. We spreken echter af dat we binnen PinC gewoon de standaard bullets gebruiken.
 
@@ -82,9 +82,14 @@ Je kunt nog diepere niveaus maken. De webbrowser gebruikt voor elk ongenummerd n
 
 Dit wordt als volgt weergegeven in de browser:
 
-1. Ziekenhuizen en verzorgingstehuizen
-	1. Brugge
-	2. Oostende
+<ol>
+	<li>Ziekenhuizen en verzorgingstehuizen
+		<ol>
+			<li>Brugge</li>
+			<li>Oostende</li>
+		</ol>
+	</li>
+</ol>
 
 Standaard zal je webbrowser de lijstitems van een genummerde lijst op elk niveau nummeren met Arabische cijfers, maar je kunt er ook voor kiezen om kleine letters, hoofdletters of Romeinse cijfers te gebruiken. Dit kan via CSS of via een type-attribuut.
 
