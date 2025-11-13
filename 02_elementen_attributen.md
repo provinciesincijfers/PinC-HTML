@@ -139,7 +139,7 @@ Naast het id-attribuut zijn er nog enkele ‘universele’ attributen die je bij
 
 Over het style-attribuut kunnen we kort zijn: we spreken af dat we het in de praktijk niet gebruiken, of enkel in héél uitzonderlijke omstandigheden. Met een style-attribuut kun je in de HTML-broncode rechtstreeks CSS-stijlinformatie meegeven (bv. lettertype, tekengrootte, marges, kleuren enz.).
 
-Veel beter is het om die stijlinformatie op een onrechtstreekse manier aan te roepen. Dat doen we via een **class**-attribuut. De stijlinformatie zelf is op voorhand gedefinieerd en zit veilig afgescheiden in een apart CSS-bestand. Het voordeel van deze manier van werken is dat een aanpassing aan de stijlen automatisch toegepast wordt op alle HTML-elementen die van dezelde class gebruikmaken. Op die manier wordt gezorgd voor een uniforme opmaak over de verschillende HTML-documenten heen. Praktische voorbeelden van welke classes je (in HTML-bijlagen) kunt gebruiken, komen verderop in deze handleiding nog uitgebreid aan bod (zie: [Opsommingen (lijsten)](05_opsommingen.md)).
+Veel beter is het om die stijlinformatie op een onrechtstreekse manier aan te roepen. Dat doen we via een **class**-attribuut. De stijlinformatie zelf is op voorhand gedefinieerd en zit veilig afgescheiden in een apart CSS-bestand. Het voordeel van deze manier van werken is dat een aanpassing aan de stijlen automatisch toegepast wordt op alle HTML-elementen die van dezelfde class gebruikmaken. Op die manier wordt gezorgd voor een uniforme opmaak over de verschillende HTML-documenten heen. Praktische voorbeelden van welke classes je (in HTML-bijlagen) kunt gebruiken, komen verderop in deze handleiding nog uitgebreid aan bod (zie: [Opsommingen (lijsten)](05_opsommingen.md)).
 
 Wanneer je meer dan één class wilt toepassen op een element, dan kan dat! Je kunt maar één class-attribuut gebruiken, maar in plaats van één classnaam op te geven als attribuutwaarde, kun je ook een lijst van meerdere classnamen opgeven met telkens een spatie ertussen, bv.:
 
@@ -202,3 +202,4 @@ Ook voor attribuutwaarden spreken we af dat we bij voorkeur kleine letters gebru
 
 ___
 Volgend hoofdstuk: [Speciale tekens](03_speciale_tekens.md)
+
