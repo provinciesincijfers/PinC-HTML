@@ -82,7 +82,7 @@ In de Unicode-tabellen op https://www.unicode.org/charts kun je voor om het even
 
 Vaak zul je zien dat naar een Unicode-teken verwezen wordt met een hoofdletter U gevolgd door een plusteken en vier of meer hexadecimale cijfers. Zo wordt bijvoorbeeld met `U+00A9` het copyright-symbool bedoeld. Het hexadecimale getal A9 komt overeen met een decimale waarde van 169.
 
-> _Tip: je kunt de rekenmachine in Windows gebruiken om heel gemakkelijk hexadecimale naar decimale getallen om te zetten en omgekeerd. In plaats van de ‘Standaard’-modus kies je daartoe de modus ‘Programmeren’._
+> _Tip: je kunt de rekenmachine in Windows gebruiken om heel gemakkelijk hexadecimale naar decimale getallen om te zetten en omgekeerd. In plaats van de ‘Standaard’-modus kies je daartoe de modus ‘Programmeur’._
 
 In HTML kun je een character reference herkennen aan een **ampersand** gevolgd door een **hekje** (`&#`), gevolgd door de code (getalwaarde) van het karakter en een **puntkomma**.
 
@@ -162,10 +162,11 @@ Daarom raden we je ten sterkste af om een HTML-bijlage te editeren in Studio. Ve
 - Bovenaan elk HTML-document plaatsen we een **meta**-tag om aan de browser duidelijk te maken dat ons document UTF-8 gebruikt.<br/><br/>
 - **Character entity references** maken gebruik van voorgedefinieerde **entities** met makkelijk te onthouden namen om accentletters en andere speciale tekens in een HTML-document op te nemen.
 - **Character references** verwijzen rechtstreeks naar de **numerieke code** van een teken. Dat kan op twee manieren: met een **decimale** of met een **hexadecimale** waarde.
-- Je kunt de ‘Programmeren’-modus in de rekenmachine van Windows gebruiken om hexadecimale getallen om te zetten naar decimale getallen en omgekeerd.
+- Je kunt de ‘Programmeur’-modus in de rekenmachine van Windows gebruiken om hexadecimale getallen om te zetten naar decimale getallen en omgekeerd.
 - Je vindt tabellen met de codes van alle Unicode-tekens op https://www.unicode.org/charts.<br/><br/>
 - Sla een HTML-document altijd op met **UTF-8-codering**.
 - **Editeer HTML-bestanden niet in Studio** maar editeeer het bestand op je lokale computer met een teksteditor en imorteer het daarna in PinC.
 
 ___
 Volgend hoofdstuk: [De structuur van een HTML-document](04_html_document.md)
+
