@@ -10,9 +10,9 @@ De ASCII-code gebruikt daarvoor de getallen 0 t.e.m. 127 en bevat daarmee dus 12
 
 Voor andere talen dan Engels volstonden 128 codes echter niet. Daarom kwamen er al gauw meerdere uitbreidingen met 256 in plaats van 128 codes. Maar de ‘standaard’ ontaardde al snel in aparte substandaarden voor verschillende regio’s: één voor West-Europese talen, één voor Oost-Europese talen, één met het Russisch alfabet, enz. Microsoft en Apple gebruikten bovendien hun eigen uitbreidingen, die niet onderling compatibel waren. Daardoor kreeg bijvoorbeeld de é (e met accent aigu) op een Windows-computer een andere code toebedeeld dan op een Apple-computer, waardoor een Franse tekst niet zomaar tussen beide systemen uitgewisseld kon worden. In al deze tekensets werd één byte (8 bits) per karakter gebruikt.
 
-Gelukkig hebben we ondertussen de **Unicode**-standaard, die zowat elk alfabet en elk teken bevat dat ergens op Aarde gebruikt wordt. Unicode is dus een bijzonder uitgebreide tekenset. Unicode is nog steeds gebaseerd op ASCII: de ons vertrouwde letters, cijfers en leestekens worden in Unicode nog steeds voorgesteld door dezelfde getallen als in ASCII (codes 0-127), maar daarnaast bevat Unicode tal van bijkomende accentletters, wiskundige, technische en andere symbolen, en andere alfabetten zoals Grieks, Cyrillisch, Thais, Hiragana en Katakana (Japans), Chinese, Japanse en Koreaanse karakters, etc. Unicode wordt nog steeds verder ontwikkeld en uitgebreid. Daarbij wordt erover gewaakt dat elke nieuwe versie nog steeds backwards compatible is met eerdere versies. Op het ogenblik van dit schrijven (medio 2024) bevat Unicode versie 15.1 zo’n 149.813 verschillende karakters en 161 _scripts_ (alfabetten). Daarbij zitten ook alfabetten die niet van links naar rechts, maar van rechts naar links geschreven worden, zoals Hebreeuws of Arabisch.
+Gelukkig hebben we ondertussen de **Unicode**-standaard, die zowat elk alfabet en elk teken bevat dat ergens op Aarde gebruikt wordt. Unicode is dus een bijzonder uitgebreide tekenset. Unicode is nog steeds gebaseerd op ASCII: de ons vertrouwde letters, cijfers en leestekens worden in Unicode nog steeds voorgesteld door dezelfde getallen als in ASCII (codes 0-127), maar daarnaast bevat Unicode tal van bijkomende accentletters, wiskundige, technische en andere symbolen, en andere alfabetten zoals Grieks, Cyrillisch, Thais, Hiragana en Katakana (Japans), Chinese, Japanse en Koreaanse karakters, etc. Unicode wordt nog steeds verder ontwikkeld en uitgebreid. Daarbij wordt erover gewaakt dat elke nieuwe versie nog steeds backwards compatible is met eerdere versies. Op het ogenblik van dit schrijven (voorjaar 2026) bevat Unicode versie 17.0 zo’n 159.801 verschillende karakters en 172 _scripts_ (alfabetten). Daarbij zitten ook alfabetten die niet van links naar rechts, maar van rechts naar links geschreven worden, zoals Hebreeuws of Arabisch.
 
-Let op: dat de Unicode-tekenset 149.813 verschillende tekens bevat, betekent _niet_ dat je al die tekens ook in de praktijk kunt gebruiken in je HTML- of andere documenten. Welke tekens beschikbaar zijn hangt immers af van welk **lettertype** je gebruikt. Elk lettertype (_font_) bevat slechts een kleine subset van de volledige Unicode-tekenset, omdat het anders onwerkbaar zou worden en omdat je de meeste van die tekens toch nooit nodig hebt.
+Let op: dat de Unicode-tekenset 159.801 verschillende tekens bevat, betekent _niet_ dat je al die tekens ook in de praktijk kunt gebruiken in je HTML- of andere documenten. Welke tekens beschikbaar zijn hangt immers af van welk **lettertype** je gebruikt. Elk lettertype (_font_) bevat slechts een kleine subset van de volledige Unicode-tekenset, omdat het anders onwerkbaar zou worden en omdat je de meeste van die tekens toch nooit nodig hebt.
 
 Wil je meer over Unicode weten of wil je al die rare tekens eens nader bekijken, neem dan een kijkje op de Unicode-website op **https://unicode.org**.
 
@@ -72,7 +72,7 @@ Verder is er nóg een character entity reference die in de praktijk wel eens van
 
 `&nbsp;` vaste spatie (Engels: no-break space)
 
-Een vaste spatie gebruik je ter vervanging van een gewone spatie op plaatsen waar je wilt vermijden dat er naar een volgende regel overgegaan wordt, bijvoorbeeld wanneer je een getal en de erbij horende eenheid wilt samenhouden (bv. `150&nbsp;m`). In theorie kun je het ook zonder character entity reference doen en een vaste spatie gewoon als Unicode-teken opnemen (met Alt+0160), maar het nadeel is dat je dan in de broncode geen verschil meer ziet met een gewone spatie (maar in een goede teksteditor zul je tóch op een of andere manier een verschil kunnen zien).
+Een vaste spatie gebruik je ter vervanging van een gewone spatie op plaatsen waar je wilt vermijden dat er naar een volgende regel overgegaan wordt, bijvoorbeeld wanneer je een getal en de erbij horende eenheid wilt samenhouden (bv. `150&nbsp;m`). In theorie kun je het ook zonder character entity reference doen en een vaste spatie gewoon als Unicode-teken opnemen (met Alt+0160), maar het nadeel is dat je dan in de broncode geen verschil meer ziet met een gewone spatie (tenzij je een geavanceerde teksteditor zoals Notepad++ gebruikt).
 
 ### Character references
 
@@ -100,7 +100,7 @@ als character reference (hexadecimaal, met voorloopnullen): `&#x00a9;`
 
 Zoals je in de voorbeelden kunt zien, maakt het bij een character reference ook niet uit of je voorloopnullen gebruikt of niet, bijvoorbeeld om een hexadecimaal getal met vier cijfers weer te geven. De character references `&#xa9;` en `&#x00a9;` zijn volkomen gelijkwaardig.
 
-> Als je ooit een dynamisch Swing-rapport hebt geprogrammeerd, dan zul je je vast herinneren dat je daarbij in een character reference niet één, maar twee hekjes moest gebruiken (bv. `&##169;`). Vergeet dat echter zo snel mogelijk, want dat is _geen_ geldige manier om speciale tekens te coderen in HTML; in een rapport was het echter een noodzaak omdat de Swing-software een hekje daar interpreteert als het begin en het einde van een stukje SRL-code (_Swing Report Language_), tenzij je twee hekjes na elkaar gebruikte, in welk geval de twee hekjes door de Swing-software tot één hekje werden herleid en dat ene hekje vervolgens correct werd geïnterpreteerd door de webbrowser. Swing-rapporten worden momenteel uitgefaseerd en vervangen door Swing Stories, waardoor je binnen afzienbare tijd geen dubbele hekjes meer zult tegenkomen.
+> Als je ooit een dynamisch Swing-rapport hebt geprogrammeerd met de oude rapportenmodule, dan zul je je vast herinneren dat je daarbij in een character reference niet één, maar twee hekjes moest gebruiken (bv. `&##169;`). Vergeet dat echter zo snel mogelijk, want dat is _geen_ geldige manier om speciale tekens te coderen in HTML; in een rapport was het echter een noodzaak omdat de Swing-software een hekje daar interpreteert als het begin en het einde van een stukje SRL-code (_Swing Report Language_), tenzij je twee hekjes na elkaar gebruikte, in welk geval de twee hekjes door de Swing-software tot één hekje werden herleid en dat ene hekje vervolgens correct werd geïnterpreteerd door de webbrowser. De oude rapporten zullen in de loop van 2026 allemaal verdwijnen en vervangen worden Stories-rapporten, waardoor je vanaf dan geen dubbele hekjes meer zult tegenkomen.
 
 ## Unicode-tekens
 
@@ -144,26 +144,23 @@ Bepaalde editors kunnen je ook helpen met het creëren van HTML-code en zullen b
 
 Ook de ingebouwde editor van Swing, waarmee je rechtstreeks platte tekst of HTML kunt intypen in bijvoorbeeld de velden van de bronnentabel, ondersteunt het gebruik van UTF-8.
 
-Maar let op wanneer je de ingebouwde HTML-editor van Studio gebruikt om een HTML-bijlage of eender welk ander HTML-bestand te editeren. Die editor heeft namelijk twee erg vervelende eigenschappen:
+Maar let op wanneer je de ingebouwde HTML-editor van Studio gebruikt om een HTML-bijlage of eender welk ander HTML-bestand te editeren. Die editor heeft namelijk een erg vervelende eigenschap. De editor herkent UTF-8-tekens (zoals é, ï, “, ” en –), **maar zal deze bij het opslaan vervangen door character (entity) references**! Een e met accent aigu wordt dus vervangen door `&eacute;`, een gedachtestreep wordt vervangen door `&#8211;`, etc. Dit is natuurlijk allerminst bevorderlijk voor de leesbaarheid.
 
-- De editor herkent UTF-8-tekens (zoals é, ï, “, ” en –), **maar zal deze bij het opslaan vervangen door character (entity) references**! Een e met accent aigu wordt dus vervangen door `&eacute;`, een gedachtestreep wordt vervangen door `&##8211;`, etc. Dit is natuurlijk allerminst bevorderlijk voor de leesbaarheid.
-- Bij het vervangen van UTF-8-tekens door character references **plaatst de editor verkeerdelijk twee hekjes in plaats van één**! Dit is een duidelijke bug in Swing, want het resultaat is dat de browser daardoor niet meer het juiste teken weergeeft, maar letterlijk &##8211; in plaats van een gedachtestreep, of &##8217; in plaats van een apostrof. De achterliggende oorzaak van deze bug is dat er wél twee hekjes gebruikt moeten worden in dynamische Swing-rapporten, omdat een hekje in rapporten het begin en einde van een stukje SRL-code markeert. Maar dat mag natuurlijk _alleen maar in dynamische rapporten_; in andere HTML-bestanden mag het beslist niet!
-
-Daarom raden we je ten sterkste af om een HTML-bijlage te editeren in Studio. Veel beter is het om je HTML-document op je lokale computer te editeren met een teksteditor als Notepad++ en vervolgens het HTML-bestand te importeren in PinC.
+Daarom raden we je af om een HTML-bijlage te editeren in Studio. Veel beter is het om je HTML-document op je lokale computer te editeren met een teksteditor als Notepad++ en vervolgens het HTML-bestand in Studio te importeren.
 
 ## Samenvatting
 
-- **Unicode** is een zeer uitgebreide tekenset van bijna 150.000 tekens, die zowat alle denkbare karakters bevat. Unicode bevat meerdere alfabetten, wiskundige, technische en andere symbolen en speciale tekens.
+- **Unicode** is een zeer uitgebreide tekenset van bijna 160.000 tekens, die zowat alle denkbare karakters bevat. Unicode bevat meerdere alfabetten, wiskundige, technische en andere symbolen en speciale tekens.
 - Elk teken uit de Unicode-tekenset wordt geïdentificeerd aan de hand van een unieke **numerieke code**.
 - Unicode is een voortzetting van **ASCII**, en ASCII is nu een subset van Unicode.
 - We maken gebruik van **UTF-8** om Unicode-tekens voor te stellen.
 - UTF-8 gebruikt één of meerdere bytes om de tekens voor te stellen (één byte voor tekens uit de ASCII-subset, meerdere bytes voor accentletters en andere speciale tekens).
 - Welke tekens je in de praktijk kunt gebruiken, hangt af van de beschikbaarheid ervan in het **lettertype** dat je gebruikt.
-- Bovenaan elk HTML-document plaatsen we een **meta**-tag om aan de browser duidelijk te maken dat ons document UTF-8 gebruikt.<br/><br/>
+- Bovenaan elk HTML-document plaatsen we een **meta**-tag om aan de browser duidelijk te maken dat ons document UTF-8 gebruikt.<br/> <br/>
 - **Character entity references** maken gebruik van voorgedefinieerde **entities** met makkelijk te onthouden namen om accentletters en andere speciale tekens in een HTML-document op te nemen.
 - **Character references** verwijzen rechtstreeks naar de **numerieke code** van een teken. Dat kan op twee manieren: met een **decimale** of met een **hexadecimale** waarde.
 - Je kunt de ‘Programmeur’-modus in de rekenmachine van Windows gebruiken om hexadecimale getallen om te zetten naar decimale getallen en omgekeerd.
-- Je vindt tabellen met de codes van alle Unicode-tekens op https://www.unicode.org/charts.<br/><br/>
+- Je vindt tabellen met de codes van alle Unicode-tekens op https://www.unicode.org/charts.<br/> <br/>
 - Sla een HTML-document altijd op met **UTF-8-codering**.
 - **Editeer HTML-bestanden niet in Studio** maar editeeer het bestand op je lokale computer met een teksteditor en imorteer het daarna in PinC.
 
