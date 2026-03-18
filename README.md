@@ -23,5 +23,3 @@ We moeten niet allemaal volleerde webdevelopers worden, maar een basiskennis van
 Aan het einde van elk hoofdstuk vind je een beknopte samenvatting en een overzicht van de HTML-elementen die in dat hoofdstuk aan bod kwamen.
 
 Eenmaal je deze handleiding volledig doorgenomen hebt, is de samenvatting aan het einde van elk hoofdstuk een handig hulpmiddel om achteraf snel iets terug te vinden.
-
-Heb je nog HTML-vragen waarop je het antwoord niet in deze beknopte handleiding terugvindt? Contacteer dan de auteur: geert.bonte@west-vlaanderen.be.
