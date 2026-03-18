@@ -52,7 +52,7 @@ Het zijn Microsoft Office-specifieke of Word-specifieke HTML-tags. Het is wellic
 
 Zonder hier gedetailleerd op in te gaan, kunnen we verklappen dat dit de aanduiding is van een _namespace_. De naam van een X(HT)ML-element of ‑attribuut kan voorafgegaan worden door de naam van een namespace en een dubbele punt. De ‘o’-namespace staat hier voor ‘office’. Elementen en attributen uit die namespace volgen niet noodzakelijk dezelfde regels als elementen en attributen in standaard HTML.
 
-Binnen Microsoft-toepassingen is de namespace ‘o’ gedefinieerd; de Microsoft-software past er zijn eigen regels op toe. Binnen Swing is die namespace niet gedefinieerd. Bij het weergeven van de Story zal de webbrowser dit daarom gewoon negeren: het is met andere alsof de betreffende tags of attributen er niet staan.
+Binnen Microsoft-toepassingen is de namespace ‘o’ gedefinieerd; de Microsoft-software past er zijn eigen regels op toe. Binnen Swing is die namespace niet gedefinieerd. Bij het weergeven van de Story zal de webbrowser dit daarom gewoon negeren: het is met andere woorden alsof de betreffende tags of attributen er niet staan.
 
 De HTML-code uit bovenstaand voorbeeld is met andere woorden volledig gelijkwaardig aan deze, veel compactere code:
 
