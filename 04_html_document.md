@@ -91,6 +91,10 @@ Binnen de head kunnen nog meer meta- en link-elementen staan en kunnen ook nog C
 
 Binnen het **body**-element staat de eigenlijke inhoud die in het browservenster wordt weergegeven. In het voorbeeld hierboven bestaat die inhoud uit een kopje van niveau 1 en een alinea met platte tekst.
 
+## HTML-fragmenten
+
+Een HTML-fragment is een stukje HTML-code dat geen op zichzelf staand HTML-document is, m.a.w. zonder **html**-, **head**- of **body**-element. Wanneer je bijvoorbeeld in Stories op de Source-knop klikt in een teksttegel, krijg je een HTML-fragment te zien.
+
 ## Commentaar
 
 Behalve een doctype declaration, HTML-elementen en inhoud kan een HTML-document ook nog **commentaar** bevatten.
