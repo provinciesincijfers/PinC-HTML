@@ -14,12 +14,12 @@ In deze handleiding zullen we ons beperken tot pure HTML, zullen we CSS terloops
 
 PinC maakt gebruik van HTML (en CSS) bij:
 
-- dynamische rapporten;
+- dynamische rapporten (*);
 - enkele velden in de bronnentabel (metadata);
 - HTML-pagina’s, bijvoorbeeld de bijlagen bij de metadata;
 - teksttegels in Stories.
 
-In deze handleiding zullen we geen aandacht meer besteden aan HTML in dynamische rapporten, aangezien de rapporten uitgefaseerd worden. Bestaande rapporten worden (voorlopig) nog wel aangepast, maar nieuwe rapporten worden niet meer gecreëerd. De rapporten worden vervangen door Stories.
+(*) Dit zijn de rapporten uit de oude rapportenmodule, die in de loop van 2026 zullen verdwijnen. De meeste van die rapporten zijn inmiddels omgezet naar Stories-rapporten. Daarom zullen we in deze handleiding geen aandacht meer besteden aan HTML in dynamische rapporten.
 
 In PinC maken we gebruik van HTML waar we grotere stukken tekst nodig hebben, bijvoorbeeld bij de metadata die we meegeven bij elke bron. Bij grotere stukken tekst is het handig om de tekst te kunnen indelen in meerdere alinea’s, om tussenkopjes te kunnen invoegen, om opsommingen te kunnen maken, om tabellen te kunnen invoegen of hier en daar een afbeelding te kunnen plaatsen. Daarnaast maken we ook gebruik van de mogelijkheid om tekst te benadrukken door middel van vet of cursief en om hyperlinks toe te voegen naar externe websites, naar bijlagen, etc.
 
