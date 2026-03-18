@@ -1,6 +1,6 @@
 # 2. Elementen en attributen
 
-HTML werkt met elementen en attributen. Wat elementen en attributen zijn, maken we duidelijk aan de hand van enkele voorbeelden:
+HTML werkt met elementen en attributen. Wat elementen en attributen precies zijn, maken we duidelijk aan de hand van enkele voorbeelden:
 
 ## Elementen
 
@@ -66,7 +66,7 @@ De `<br/>`-tag zorgt ervoor dat de inhoud die volgt, op een nieuwe regel terecht
 
 Dit moet je ook nog weten over vet en cursief: normaal gezien gebruiken we daar de elementen **b** (bold) en **i** (italic) voor. Maar je kunt ook twee alternatieve elementen tegenkomen: **strong** en **em**. Ook deze elementen worden door browsers als vet en cursief weergegeven.
 
-Maar wat is dan het verschil? Het em-element (emphasis) wordt gebruikt om een stukje tekst te benadrukken. Standaard gebeurt dat door de tekst cursief weer te geven. Maar er zijn nog andere manieren denkbaar om tekst te benadrukken, bijvoorbeeld de tekst in een andere kleur of in een ander lettertype plaatsen, de tekst aanspatiëren, een achtergrondkleur gebruiken, etc. Dat effect kan dan bereikt worden door de gewenste stijl te definiëren met CSS. Het strong-element wordt gebruikt om een stukje tekst nog wat sterker te benadrukken. Standaard gebeurt dat door de tekst vet weer te geven, maar ook hier zijn er weer andere manieren denkbaar.
+Maar wat is dan het verschil? Het em-element (emphasis) wordt gebruikt om een stukje tekst te benadrukken. Standaard gebeurt dat door de tekst cursief weer te geven. Maar er zijn nog andere manieren denkbaar om tekst te benadrukken, bijvoorbeeld de tekst in een andere kleur of in een ander lettertype plaatsen, de tekst aanspatiëren, een achtergrondkleur gebruiken, etc. Dat effect kan dan bereikt worden door de gewenste opmaakstijl te definiëren met CSS. Het strong-element wordt gebruikt om een stukje tekst nog wat sterker te benadrukken. Standaard gebeurt dat door de tekst vet weer te geven, maar ook hier zijn er weer andere manieren denkbaar.
 
 We spreken af dat we binnen PinC gewoon b en i gebruiken voor vet en cursief. Als we andere manieren van benadrukken nodig hebben, dan kunnen we daarvoor em en strong gebruiken en de gewenste opmaak opgeven via CSS.
 
