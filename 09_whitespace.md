@@ -66,26 +66,26 @@ Zoals gezegd worden opeenvolgende spaties of andere whitespace-karakters zoals t
 
 Je kunt dit echter omzeilen door het gebruik van vaste spaties (U+00A0, Alt+0160 of `&nbsp;`). Elke vaste spatie binnen een tekstblok zal door de browser weergegeven worden, ook wanneer je meerdere vaste spaties na elkaar gebruikt. Al wordt het ten sterkste afgeraden om op die manier extra ruimte te creëren. Een beter alternatief is het gebruik van CSS.
 
-Daarnaast kun je ook gebruikmaken van een aantal speciale soorten spaties (elk met een verschillende breedte):
+Daarnaast kun je ook gebruikmaken van een aantal speciale soorten spaties, elk met een verschillende breedte. In de voorbeeldkolom hebben we de betreffende spatie telkens tussen twee hoofdletters H geplaatst:
 
-| Unicode | Omschrijving                                    |
-| ------- | ----------------------------------------------- |
-| U+2002  | en space                                        |
-| U+2003  | em space                                        |
-| U+2004  | ⅓ em space                                      |
-| U+2005  | ¼ em space                                      |
-| U+2006  | ⅙ em space                                      |
-| U+2007  | figure space                                    |
-| U+2008  | punctuation space                               |
-| U+2009  | thin space                                      |
-| U+200A  | hair space                                      |
-| U+200B  | zero width space                                |
+| Unicode | Omschrijving                                    | Voorbeeld |
+| ------- | ----------------------------------------------- | ----------|
+| U+2002  | en space                                        | H H |
+| U+2003  | em space                                        | H H |
+| U+2004  | ⅓ em space                                      | H H |
+| U+2005  | ¼ em space                                      | H H |
+| U+2006  | ⅙ em space                                      | H H |
+| U+2007  | figure space                                    | H H |
+| U+2008  | punctuation space                               | H H |
+| U+2009  | thin space                                      | H H |
+| U+200A  | hair space                                      | H H |
+| U+200B  | zero width space                                | HH |
 
-Een _em space_ (em-spatie) is een extra brede spatie waarvan de breedte overeenkomt met de tekengrootte. Bij een tekengrootte van 10 punt is zo’n spatie dus ook 10 punt breed. Dat komt in de meeste lettertypen overeen met ruwweg de breedte van een hoofdletter M, vandaar de naam _em space_. Een _en space_ (en-spatie) is half zo breed.
+Een _em space_ (em-spatie) is een extra brede spatie waarvan de breedte overeenkomt met de tekengrootte. Bij een tekengrootte van 10 punt (10pt) is zo’n spatie dus ook 10 punt breed. Dat komt in de meeste lettertypen overeen met ruwweg de breedte van een hoofdletter M, vandaar de naam _em space_. Een _en space_ (en-spatie) is half zo breed.
 
 Een _figure space_ heeft de breedte van een cijfer, een _punctuation space_ heeft de breedte van een punt of een komma.
 
-De _thin space_ is een dunne spatie, de _hair space_ is extra dun, doorgaans iets meer en iets minder dan de helft van een gewone spatie, maar dat kan per lettertype verschillen.
+De _thin space_ is een dunne spatie, de _hair space_ is extra dun. Doorgaans zijn deze spaties iets meer resp. iets minder dan de helft van een gewone spatie, maar dat kan per lettertype verschillen.
 
 De _zero width space_ tenslotte is een spatie met een breedte van 0. Je vraagt je wellicht af waar dat goed voor is, maar de zero width space heeft wel degelijk een bestaansreden. Je kunt haar bijvoorbeeld gebruiken op plaatsen waar een regel afgebroken mag worden zonder dat er een afbreekstreepje mag verschijnen. Net zoals bij elke gewone spatie kan er op die plaats een overgang naar een nieuwe regel plaatsvinden als het volgende woord niet meer op de regel past, maar voor de rest is de zero width space onzichtbaar.
 
@@ -95,7 +95,7 @@ Je kunt al deze speciale spaties invoegen als een character reference, bv. `&#x2
 
 ## Whitespace in PinC
 
-De Swing-software heeft een vervelende eigenschap: bij het weergeven van de HTML-velden van de bronnentabel zal Swing alle regeleinden ongevraagd vervangen door een `<br/>`-tag. De makers van Swing zijn uitgegaan van de veronderstelling dat dit het de gebruiker (in dit geval de PinC-beheerder) eenvoudiger maakt.
+De Swing-software heeft een vervelende eigenschap: bij het weergeven van de HTML-velden in de bronnentabel (en andere tabellen met HTML-velden) zal Swing alle regeleinden ongevraagd vervangen door een `<br/>`-tag. De makers van Swing zijn uitgegaan van de veronderstelling dat dit het de gebruiker (in dit geval de PinC-beheerder) eenvoudiger maakt.
 
 In de praktijk maakt dit het ons echter knap lastiger. Stel dat we het stukje HTML uit ons eerdere voorbeeld, netjes voorzien van regeleinden en insprongen, gebruiken in het Description-veld van de bronnentabel, dan is het niet onze code, maar wel onderstaand stukje code, dat uiteindelijk door de webbrowser getoond zal worden:
 
