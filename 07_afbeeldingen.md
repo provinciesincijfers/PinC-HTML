@@ -120,7 +120,7 @@ In bovenstaand voorbeeld wordt gelinkt naar een document ergens op GitHub.
 Linken naar een e-mailadres kan als volgt:
 
 ```
-Contact: <a href="mailto://info@provincies.incijfers.be">info@provincies.incijfers.be</a>
+Contact: <a href="mailto:info@provincies.incijfers.be">info@provincies.incijfers.be</a>
 ```
 
 ## Samenvatting
@@ -134,8 +134,9 @@ Contact: <a href="mailto://info@provincies.incijfers.be">info@provincies.incijfe
 - In de HTML-bijlagen plaatsen we afbeeldingen die we willen centreren binnen een **div**-element met een `class="image"`-attribuut<br/><br/>
 - Een link voeg je in aan de hand van een `a`-element met een `href`-attribuut.
 - Met een `target`-attribuut zorg je ervoor dat de link in een andere browsertab geopend wordt.
-- Linken naar een bepaalde plaats in een document kan door aan het einde van de URL een fragment toe ge voegen via een `#`-teken
+- Je kunt naar een bepaalde plaats in een document linken door aan het einde van de URL een _fragment_ toe te voegen via een `#`-teken gevolgd.
 - Het fragment verwijst naar een element met een `id`-attribuut.
+- Linken naar een e-mailadres kan met `mailto:`
 
 ### HTML-elementen in dit hoofdstuk
 
