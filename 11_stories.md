@@ -125,7 +125,7 @@ Een andere aanpak is deze: in plaats van de tekst te **plakken** (met **Ctrl+V**
 
 Kies je voor dat laatste, dan wordt enkel de eigenlijke tekst geplakt en wordt de oorspronkelijke opmaak _niet_ mee gekopieerd. De enige HTML-elementen die daarbij overblijven, zijn **p** en **br**. Je bent dan verlost van namespaces, classes, span-elementen, style-attributen, etc.
 
-Je krijgt daardoor geen ongewenste veranderingen van tekengrootte, regelafstand of lettertype (wat een ongetwijfeld voordeel is), maar je bent dan helaas ook vet en cursief, subscript en superscript kwijt (wat weer een nadeel is). Bekijk eens de onderliggende HTML-code en ontdek het verschil. Aan jou om te oordelen wat het handigst werkt, naargelang de situatie.
+Je krijgt daardoor geen ongewenste veranderingen van tekengrootte, regelafstand of lettertype (wat een ongetwijfeld voordeel is), maar je bent dan helaas ook vet en cursief, subscript, superscript en hyperlinks kwijt (wat weer een nadeel is). Bekijk eens de onderliggende HTML-code en ontdek het verschil. Aan jou om te oordelen wat het handigst werkt, naargelang de situatie.
 
 ## Samenvatting
 
