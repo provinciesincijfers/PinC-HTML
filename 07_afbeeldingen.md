@@ -1,4 +1,6 @@
-# 7. Afbeeldingen
+# 7. Afbeeldingen en hyperlinks
+
+## Afbeeldingen
 
 In hoofdstuk 2 maakte je al kennis met het **img**-element, waarmee je een afbeelding kunt invoegen:
 
@@ -34,7 +36,7 @@ De afbeelding wordt hiermee weergegeven met een breedte van 600 pixels. Als de a
 
 Los daarvan kunnen de afmetingen ook beïnvloed worden door de CSS-stijl die wordt toegepast. Met CSS kun je bijvoorbeeld ook een _maximale_ breedte en/of hoogte opgeven. Als de afbeelding kleiner is dan de opgegeven waarde, wordt de afbeelding op haar normale grootte weergegeven; is de afbeelding groter, dan wordt ze verkleind.
 
-## Afbeeldingen in HTML-bijlagen op PinC
+### Afbeeldingen in HTML-bijlagen op PinC
 
 Voor afbeeldingen in de HTML-bijlagen hebben we een map `images` gecreëerd, waarnaar je de afbeeldingen kunt uploaden. Die submap bevindt zich binnen de map waarnaar je de HTML-bestanden uploadt. In je HTML-bestand gebruik je dan `src="images/..."`, waarbij je de puntjes vervangt door de bestandsnaam van de afbeelding (zoals in het eerdere voorbeeld).
 
@@ -67,13 +69,59 @@ Voorlopig zijn dat de twee manieren die we voorzien hebben om (grotere) afbeeldi
 
 N.B.: **div** (_division_) is een element dat voor heel wat verschillende doeleinden gebruikt kan worden. Doorgaans wordt het voorzien van een class- of een id-attribuut om een onderscheid te maken tussen de verschillende soorten div-elementen, en wordt daaraan een CSS-stijl gekoppeld. In tegenstelling tot p-elementen kun je div-elementen binnen elkaar nesten, m.a.w. binnen een div-element kun je weer andere div-elementen creëren. Complexe webpagina’s zijn vaak opgebouwd uit heel veel verschillende div-elementen.
 
-## Bestandsformaten voor afbeeldingen
+### Bestandsformaten voor afbeeldingen
 
 Verder moet je nog het volgende weten over afbeeldingen: bepaalde afbeeldingsformaten, zoals bijvoorbeeld PNG of GIF, laten toe om delen van de afbeelding transparant te maken, zodat de achtergrondkleur van de webpagina zichtbaar wordt. Andere afbeeldingsformaten, zoals bijvoorbeeld JPG of BMP, hebben die eigenschap niet.
 
 Ook is er een belangrijk onderscheid tussen enerzijds bitmap- of rasterafbeeldingen, zoals bijvoorbeeld PNG of JPG, en anderzijds vectorafbeeldingen, zoals bijvoorbeeld SVG of EPS. Bitmapafbeeldingen bestaan uit pixels en zijn uitermate geschikt voor foto’s. Wanneer je een bitmapafbeelding vergroot of erop inzoomt, dan worden die pixels uitvergroot en wordt het beeld waziger. Vectorafbeeldingen daarentegen bestaan uit meetkundige objecten en zijn uitermate geschikt voor afbeeldingen die uit lijntekeningen en tekst bestaan. Wanneer je een vectorafbeelding vergroot of erop inzoomt, blijft de afbeelding er haarscherp uitzien!
 
 Dat staat volledig los van HTML en CSS, maar het is iets waar je rekening mee moet houden wanneer je een afbeelding ontwerpt of laat ontwerpen voor gebruik in een webpagina.
+
+## Hyperlinks
+
+Via _hyperlinks_ (kortweg: _links_ of _koppelingen_) worden verbindingen gelegd tussen webpagina’s. Wanneer de gebruiker op een link klikt, wordt doorgaans een andere pagina geladen: links worden gebruikt om verbindingen te leggen tussen webpagina’s, maar ook om bestanden te downloaden, om je e-mailprogramma op te starten (wanneer er gelinkt wordt naar een e-mailadres) enz.
+
+In HTML maak je een link aan de hand van een `a`-element met een `href`-attribuut. Tussen de begin- en de eindtag zet je een stukje tekst. Die tekst wordt dan in de webbrowser doorgaans onderstreept weergegeven, en de muisaanwijzer verandert in een handje wanneer de gebruiker erover hovert.
+
+Wanneer je naar een andere webpagina wilt linken, bevat de waarde van het `href`-attribuut de URL van die andere pagina, bv.:
+
+```
+Kijk eens op <a href="https://provincies.incijfers.be">PinC</a>.
+```
+
+Wanneer de gebruiker op de link klikt, zal de opgegeven URL geopend (en weergegeven) worden. Wil je dat de URL geopend wordt in een nieuwe browsertab, dan kun je een `target="_blank"`-attribuut toevoegen, bv.:
+
+```
+Kijk eens op <a href="https://provincies.incijfers.be" target="_blank">PinC</a>.
+```
+
+Je kunt ook linken naar een bepaalde plaats in een HTML-document. Het element (de plaats) waar je naar linkt, moet dan een `id`-attribuut hebben. Aan het einde van de link plaats je dan een zogenaamd _fragment_: een `#`-teken gevolgd door de `id`-waarde van het element waarnaar je verwijst, bv.:
+
+```
+<h1 id="chapter3">Hoofdstuk 3</h1>
+...
+<p>Zie <a href="#chapter3">hoofdstuk 3</a>.</p>
+```
+
+In bovenstaand voorbeeld wordt gelinkt naar een plaats in hetzelfde HTML-document. Het element waarnaar verwezen wordt, heeft een `id`-attribuut met als waarde `chapter3`. Je kunt ook linken naar een bepaalde plaats in een ander HTML-document, bv.:
+
+```
+<p>Zie <a href="deel1.html#chapter3">hoofdstuk 3</a>.</p>
+```
+
+In bovenstaand voorbeeld wordt gelinkt naar het document `deel1.html` (dat zich op dezelfde website en in dezelfde map bevindt als het document vanwaar je linkt).
+
+```
+<p>Zie de <a href="https://github.com/provinciesincijfers/PinC-HTML/blob/main/05_opsommingen.md#samenvatting">samenvatting</a>.</p>
+```
+
+In bovenstaand voorbeeld wordt gelinkt naar een document ergens op GitHub.
+
+Linken naar een e-mailadres kan als volgt:
+
+```
+Contact: <a href="mailto://info@provincies.incijfers.be">info@provincies.incijfers.be</a>
+```
 
 ## Samenvatting
 
@@ -83,13 +131,19 @@ Dat staat volledig los van HTML en CSS, maar het is iets waar je rekening mee mo
 - Door de breedte (in pixels) op te geven met een `width`-attribuut kun je de afbeelding vergroten of verkleinen.<br/><br/>
 - In de HTML-bijlagen voorzien we de afbeelding van een kader met een `class="border"`-attribuut.
 - In de HTML-bijlagen voegen we een afbeelding in tussen twee tekstblokken.
-- In de HTML-bijlagen plaatsen we afbeeldingen die we willen centreren binnen een **div**-element met een `class="image"`-attribuut.
+- In de HTML-bijlagen plaatsen we afbeeldingen die we willen centreren binnen een **div**-element met een `class="image"`-attribuut<br/><br/>
+- Een link voeg je in aan de hand van een `a`-element met een `href`-attribuut.
+- Met een `target`-attribuut zorg je ervoor dat de link in een andere browsertab geopend wordt.
+- Linken naar een bepaalde plaats in een document kan door aan het einde van de URL een fragment toe ge voegen via een `#`-teken
+- Het fragment verwijst naar een element met een `id`-attribuut.
 
 ### HTML-elementen in dit hoofdstuk
 
 `div`: divisie (algemeen blok-element) – attribuut: `class`: classnaam
 
 `img`: afbeelding – attributen: `alt` (alternatieve tekst), `class`: classnaam, `src` (URL of pad naar de afbeelding), `width` (breedte in pixels), `height` (hoogte in pixels)
+
+`a`: ‘anker’, wordt gebruikt om links in te voegen – attributen: `href`: URL van de webpagina of het e-mailadres waar je naar linkt, `target`: browsertab waarin de URL geopend moet worden
 
 ___
 Volgend hoofdstuk: [Titels en tussenkopjes](08_koppen.md)
