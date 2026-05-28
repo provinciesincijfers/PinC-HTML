@@ -14,7 +14,7 @@ We moeten niet allemaal volleerde webdevelopers worden, maar een basiskennis van
 4. [De structuur van een HTML-document](04_html_document.md)
 5. [Opsommingen (lijsten)](05_opsommingen.md)
 6. [Tabellen](06_tabellen.md)
-7. [Afbeeldingen](07_afbeeldingen.md)
+7. [Afbeeldingen en hyperlinks](07_afbeeldingen.md)
 8. [Titels en tussenkopjes](08_koppen.md)
 9. [Whitespace](09_whitespace.md)
 10. [HTML-validators](10_validators.md)
