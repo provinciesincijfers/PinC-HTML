@@ -123,6 +123,8 @@ Linken naar een e-mailadres kan als volgt:
 Contact: <a href="mailto:info@provincies.incijfers.be">info@provincies.incijfers.be</a>
 ```
 
+Wanneer de gebruiker op de link klikt, wordt het standaard e-mailprogramma geopend en wordt er een nieuwe, lege e-mail aangemaakt waarbij het e-mailadres al in gevuld is in het ‘Aan’-veld.
+
 ## Samenvatting
 
 - Een afbeelding wordt ingevoegd aan de hand van een **img**-element.
