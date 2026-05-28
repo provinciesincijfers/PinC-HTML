@@ -136,7 +136,7 @@ Wanneer de gebruiker op de link klikt, wordt het standaard e-mailprogramma geope
 - In de HTML-bijlagen plaatsen we afbeeldingen die we willen centreren binnen een **div**-element met een `class="image"`-attribuut<br/><br/>
 - Een link voeg je in aan de hand van een **a**-element met een `href`-attribuut.
 - Met een `target`-attribuut zorg je ervoor dat de link in een andere browsertab geopend wordt.
-- Je kunt naar een bepaalde plaats in een document linken door aan het einde van de URL een _fragment_ toe te voegen via een `#`-teken gevolgd.
+- Je kunt naar een bepaalde plaats in een document linken door aan het einde van de URL een _fragment_ toe te voegen via een `#`-teken.
 - Het fragment verwijst naar een element met een `id`-attribuut.
 - Linken naar een e-mailadres kan met `mailto:`
 
