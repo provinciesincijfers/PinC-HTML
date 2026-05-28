@@ -81,7 +81,7 @@ Dat staat volledig los van HTML en CSS, maar het is iets waar je rekening mee mo
 
 Via _hyperlinks_ (kortweg: _links_ of _koppelingen_) worden verbindingen gelegd tussen webpagina’s. Wanneer de gebruiker op een link klikt, wordt doorgaans een andere pagina geladen: links worden gebruikt om verbindingen te leggen tussen webpagina’s, maar ook om bestanden te downloaden, om je e-mailprogramma op te starten (wanneer er gelinkt wordt naar een e-mailadres) enz.
 
-In HTML maak je een link aan de hand van een `a`-element met een `href`-attribuut. Tussen de begin- en de eindtag zet je een stukje tekst. Die tekst wordt dan in de webbrowser doorgaans onderstreept weergegeven, en de muisaanwijzer verandert in een handje wanneer de gebruiker erover hovert.
+In HTML maak je een link aan de hand van een **a**-element met een `href`-attribuut. Tussen de begin- en de eindtag zet je een stukje tekst. Die tekst wordt dan in de webbrowser doorgaans onderstreept weergegeven, en de muisaanwijzer verandert in een handje wanneer de gebruiker erover hovert.
 
 Wanneer je naar een andere webpagina wilt linken, bevat de waarde van het `href`-attribuut de URL van die andere pagina, bv.:
 
@@ -134,7 +134,7 @@ Wanneer de gebruiker op de link klikt, wordt het standaard e-mailprogramma geope
 - In de HTML-bijlagen voorzien we de afbeelding van een kader met een `class="border"`-attribuut.
 - In de HTML-bijlagen voegen we een afbeelding in tussen twee tekstblokken.
 - In de HTML-bijlagen plaatsen we afbeeldingen die we willen centreren binnen een **div**-element met een `class="image"`-attribuut<br/><br/>
-- Een link voeg je in aan de hand van een `a`-element met een `href`-attribuut.
+- Een link voeg je in aan de hand van een **a**-element met een `href`-attribuut.
 - Met een `target`-attribuut zorg je ervoor dat de link in een andere browsertab geopend wordt.
 - Je kunt naar een bepaalde plaats in een document linken door aan het einde van de URL een _fragment_ toe te voegen via een `#`-teken gevolgd.
 - Het fragment verwijst naar een element met een `id`-attribuut.
